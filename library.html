@@ -38,7 +38,6 @@
               >Profile</a
             >
           </li>
-
           <li class="lang-menu-item">
             <div class="lang-switcher">
               <button
@@ -374,6 +373,23 @@
           fallback.style.display = "none";
         }
       }
+      document.addEventListener("DOMContentLoaded", () => {
+        // Ambil path dari URL yang sedang dibuka (misal: /notes.html)
+        const currentLocation = window.location.pathname;
+
+        // Pilih semua link navigasi utama (kecuali tombol bahasa)
+        const navLinks = document.querySelectorAll(".nav-links > li > a");
+
+        navLinks.forEach((link) => {
+          // Ambil nilai href dari setiap link (misal: notes.html)
+          const linkPath = link.getAttribute("href");
+
+          // Jika URL saat ini mengandung nama file dari href, tambahkan kelas 'active'
+          if (currentLocation.includes(linkPath)) {
+            link.classList.add("active");
+          }
+        });
+      });
     </script>
   </body>
 </html>

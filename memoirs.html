@@ -16,28 +16,6 @@
   </head>
   <body>
     <header class="university-header">
-      <div class="top-bar">
-        <div class="top-bar-inner">
-          <span class="dossier-id" data-lang-id="ARSIP" data-lang-en="DOSSIER"
-            >DOSSIER</span
-          >
-
-          <div class="lang-switcher">
-            <button class="lang-btn" id="btn-id" onclick="switchLanguage('id')">
-              ID
-            </button>
-            <span class="lang-divider">|</span>
-            <button
-              class="lang-btn active"
-              id="btn-en"
-              onclick="switchLanguage('en')"
-            >
-              EN
-            </button>
-          </div>
-        </div>
-      </div>
-
       <nav class="main-nav">
         <div class="logo">
           <a href="index.html" class="serif-brand">WTU</a>
@@ -49,23 +27,33 @@
             >
           </li>
           <li>
-            <a
-              href="memoirs.html"
-              class="active"
-              data-lang-id="Memoar"
-              data-lang-en="Memoirs"
-              >Memoirs</a
-            >
-          </li>
-          <li>
             <a href="library.html" data-lang-id="Pustaka" data-lang-en="Library"
               >Library</a
             >
           </li>
           <li>
-            <a href="about.html" data-lang-id="Profil" data-lang-en="Profile"
+            <a href="profile.html" data-lang-id="Profil" data-lang-en="Profile"
               >Profile</a
             >
+          </li>
+          <li class="lang-menu-item">
+            <div class="lang-switcher">
+              <button
+                class="lang-btn"
+                id="btn-id"
+                onclick="switchLanguage('id')"
+              >
+                ID
+              </button>
+              <span class="lang-divider">|</span>
+              <button
+                class="lang-btn active"
+                id="btn-en"
+                onclick="switchLanguage('en')"
+              >
+                EN
+              </button>
+            </div>
           </li>
         </ul>
       </nav>
@@ -864,6 +852,23 @@
           if (indexLinks[index]) indexLinks[index].style.display = displayMode;
         });
       }
+      document.addEventListener("DOMContentLoaded", () => {
+        // Ambil path dari URL yang sedang dibuka (misal: /notes.html)
+        const currentLocation = window.location.pathname;
+
+        // Pilih semua link navigasi utama (kecuali tombol bahasa)
+        const navLinks = document.querySelectorAll(".nav-links > li > a");
+
+        navLinks.forEach((link) => {
+          // Ambil nilai href dari setiap link (misal: notes.html)
+          const linkPath = link.getAttribute("href");
+
+          // Jika URL saat ini mengandung nama file dari href, tambahkan kelas 'active'
+          if (currentLocation.includes(linkPath)) {
+            link.classList.add("active");
+          }
+        });
+      });
     </script>
   </body>
 </html>
