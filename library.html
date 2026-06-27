@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Library | WTU</title>
+
+    <!-- Google Fonts Integration: Crimson Text & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER RESMI (IVY LEAGUE STYLE) -->
+    <header class="university-header">
+      <nav class="main-nav">
+        <div class="logo">
+          <a href="index.html" class="serif-brand">WTU</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="notes.html" data-lang-id="Catatan" data-lang-en="Notes"
+              >Notes</a
+            >
+          </li>
+          <li>
+            <a href="library.html" data-lang-id="Pustaka" data-lang-en="Library"
+              >Library</a
+            >
+          </li>
+          <li>
+            <a href="profile.html" data-lang-id="Profil" data-lang-en="Profile"
+              >Profile</a
+            >
+          </li>
+
+          <li class="lang-menu-item">
+            <div class="lang-switcher">
+              <button
+                class="lang-btn"
+                id="btn-id"
+                onclick="switchLanguage('id')"
+              >
+                ID
+              </button>
+              <span class="lang-divider">|</span>
+              <button
+                class="lang-btn active"
+                id="btn-en"
+                onclick="switchLanguage('en')"
+              >
+                EN
+              </button>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- FORMAL PAGE TITLE -->
+    <div class="page-title-banner">
+      <p
+        class="page-subtitle"
+        data-lang-id="Arsip Referensi & Literatur"
+        data-lang-en="Reference & Literature Archive"
+      >
+        Reference & Literature Archive
+      </p>
+      <div class="title-ornament"></div>
+      <h1
+        class="page-title"
+        data-lang-id="Pustaka Digital"
+        data-lang-en="Digital Library"
+      >
+        Digital Library
+      </h1>
+      <p
+        class="page-subtitle"
+        style="
+          text-transform: none;
+          font-family: var(--font-serif);
+          font-size: 1.15rem;
+          font-style: italic;
+          max-width: 700px;
+          margin: 1.5rem auto 0;
+          letter-spacing: normal;
+        "
+        data-lang-id="Koleksi buku, makalah penelitian, catatan kuliah, dan referensi teknis pilihan yang membentuk pemahaman saya tentang dinamika iklim, sains, tata kelola, dan metodologi lapangan."
+        data-lang-en="A curated collection of books, research papers, lecture notes, and technical references that have shaped my understanding of climate dynamics, science, governance, and field methodologies."
+      >
+        A curated collection of books, research papers, lecture notes, and
+        technical references that have shaped my understanding of climate
+        dynamics, science, governance, and field methodologies.
+      </p>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+      <!-- LIBRARY CONTROLS (SEARCH) -->
+      <section class="library-controls">
+        <div
+          class="search-minimal-wrapper"
+          style="margin-bottom: 0; width: 100%; max-width: 450px"
+        >
+          <svg
+            class="search-minimal-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            type="text"
+            id="librarySearch"
+            class="search-minimal-input"
+            data-lang-id="Cari judul buku, penulis, atau topik..."
+            data-lang-en="Search titles, authors, or topics..."
+            placeholder="Search titles, authors, or topics..."
+            onkeyup="executeLibrarySearch()"
+          />
+        </div>
+      </section>
+
+      <!-- LIBRARY GRID -->
+      <section class="library-grid" id="libraryGridContainer">
+        <!-- BOOK ITEM 1 -->
+        <a
+          href="https://drive.google.com/file/d/1z07n_0d3Lz8zeO4GWqv-4VAlbubUl2Rg/view?usp=sharing"
+          target="_blank"
+          class="book-card"
+        >
+          <div class="book-cover">
+            <img
+              src="images/does asean matter.jpg"
+              alt="Does ASEAN Matter? A View from Within"
+            />
+            <div class="book-overlay">
+              <span data-lang-id="Buka Dokumen" data-lang-en="Open Archive"
+                >Open Archive</span
+              >
+            </div>
+          </div>
+          <div class="book-info">
+            <span
+              class="book-category"
+              data-lang-id="Hubungan Internasional"
+              data-lang-en="International Relations"
+              >International Relations</span
+            >
+            <h3 class="serif">Does ASEAN Matter? A View from Within</h3>
+            <p>Marty Natalegawa</p>
+          </div>
+        </a>
+
+        <!-- BOOK ITEM 2 -->
+        <a
+          href="https://drive.google.com/file/d/1OC3FuSwFpUMQScCfgfVP8A9q7yI2G9bG/view?usp=sharing"
+          target="_blank"
+          class="book-card"
+        >
+          <div class="book-cover">
+            <img
+              src="images/creating a learning society.jpg"
+              alt="Creating a Learning Society"
+            />
+            <div class="book-overlay">
+              <span data-lang-id="Buka Dokumen" data-lang-en="Open Archive"
+                >Open Archive</span
+              >
+            </div>
+          </div>
+          <div class="book-info">
+            <span
+              class="book-category"
+              data-lang-id="Kajian Pendidikan"
+              data-lang-en="Educational Studies"
+              >Educational Studies</span
+            >
+            <h3 class="serif">Creating a Learning Society</h3>
+            <p>Stephen Gorard & Gareth Rees</p>
+          </div>
+        </a>
+
+        <!-- BOOK ITEM 3 -->
+        <a
+          href="https://drive.google.com/file/d/1fYMXhTZtERrCajVW3YcjhchWr6oY5aEJ/view?usp=sharing"
+          target="_blank"
+          class="book-card"
+        >
+          <div class="book-cover">
+            <img
+              src="images/majapahit.jpg"
+              alt="Majapahit Inspiration for The World"
+            />
+            <div class="book-overlay">
+              <span data-lang-id="Buka Dokumen" data-lang-en="Open Archive"
+                >Open Archive</span
+              >
+            </div>
+          </div>
+          <div class="book-info">
+            <span
+              class="book-category"
+              data-lang-id="Sejarah"
+              data-lang-en="History"
+              >History</span
+            >
+            <h3 class="serif">Majapahit Inspiration for The World</h3>
+            <p>Wes McKinney</p>
+          </div>
+        </a>
+      </section>
+
+      <!-- NO RESULTS FALLBACK -->
+      <div
+        id="noResultsElement"
+        class="no-results-box"
+        style="display: none; margin-top: 2rem"
+      >
+        <p
+          data-lang-id="Tidak ada pustaka yang cocok dengan kriteria pencarian Anda."
+          data-lang-en="No reference materials match your search criteria."
+        >
+          No reference materials match your search criteria.
+        </p>
+      </div>
+    </main>
+
+    <!-- FOOTER RESMI -->
+    <footer class="university-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand-block">
+            <h3 class="footer-brand serif">WTU</h3>
+            <p
+              class="footer-tagline"
+              data-lang-id="Sebuah kontinuitas narasi pemikiran saintifik dan metodologi lapangan."
+              data-lang-en="An ongoing continuum of scientific thoughts and field methodologies."
+            >
+              An ongoing continuum of scientific thoughts and field
+              methodologies.
+            </p>
+          </div>
+
+          <div
+            class="footer-links-group"
+            style="display: flex; gap: 4rem; justify-content: flex-end"
+          >
+            <div>
+              <h4 data-lang-id="Navigasi" data-lang-en="Explore">Explore</h4>
+              <ul>
+                <li>
+                  <a
+                    href="notes.html"
+                    data-lang-id="Catatan"
+                    data-lang-en="Notes"
+                    >Notes</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="library.html"
+                    data-lang-id="Pustaka"
+                    data-lang-en="Library"
+                    >Library</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="profile.html"
+                    data-lang-id="Profil"
+                    data-lang-en="Profile"
+                    >Profile</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 data-lang-id="Jaringan" data-lang-en="Connect">Connect</h4>
+              <ul>
+                <li><a href="mailto:alvinwildansahli@gmail.com">Email</a></li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/alvinwildans"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/alvinwildans"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Instagram</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; 2026 Alvin Wildan Sahli. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LOGIC SCRIPT: SEARCH & DUAL-LANGUAGE -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Initialize Default Language
+        switchLanguage("en");
+      });
+
+      // Localization with Null-Safeguard
+      function switchLanguage(lang) {
+        document
+          .querySelectorAll(".lang-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        document.getElementById(`btn-${lang}`).classList.add("active");
+        document.documentElement.lang = lang;
+
+        const elementsToTranslate = document.querySelectorAll(
+          "[data-lang-id], [data-lang-en]",
+        );
+        elementsToTranslate.forEach((el) => {
+          const val = el.getAttribute(`data-lang-${lang}`);
+
+          if (val !== null && val.trim() !== "") {
+            if (el.tagName === "INPUT") {
+              el.setAttribute("placeholder", val);
+            } else {
+              el.textContent = val;
+            }
+          }
+        });
+      }
+
+      // Library Search Filter
+      function executeLibrarySearch() {
+        const input = document.getElementById("librarySearch");
+        const filter = input.value.toLowerCase();
+        const cards = document.querySelectorAll(".book-card");
+        let visibleCount = 0;
+
+        cards.forEach((card) => {
+          const contentText = card.textContent.toLowerCase();
+          if (contentText.includes(filter)) {
+            card.style.display = "";
+            visibleCount++;
+          } else {
+            card.style.display = "none";
+          }
+        });
+
+        // Tampilkan pesan jika arsip tidak ditemukan
+        const fallback = document.getElementById("noResultsElement");
+        if (visibleCount === 0) {
+          fallback.style.display = "block";
+        } else {
+          fallback.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

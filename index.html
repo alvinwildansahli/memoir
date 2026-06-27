@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WTU | A Personal Archive</title>
+
+    <!-- Google Fonts Integration: Crimson Text & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER RESMI (IVY LEAGUE STYLE) -->
+    <header class="university-header">
+      <nav class="main-nav">
+        <div class="logo">
+          <a href="index.html" class="serif-brand">WTU</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="notes.html" data-lang-id="Catatan" data-lang-en="Notes"
+              >Notes</a
+            >
+          </li>
+          <li>
+            <a href="library.html" data-lang-id="Pustaka" data-lang-en="Library"
+              >Library</a
+            >
+          </li>
+          <li>
+            <a href="profile.html" data-lang-id="Profil" data-lang-en="Profile"
+              >Profile</a
+            >
+          </li>
+
+          <li class="lang-menu-item">
+            <div class="lang-switcher">
+              <button
+                class="lang-btn"
+                id="btn-id"
+                onclick="switchLanguage('id')"
+              >
+                ID
+              </button>
+              <span class="lang-divider">|</span>
+              <button
+                class="lang-btn active"
+                id="btn-en"
+                onclick="switchLanguage('en')"
+              >
+                EN
+              </button>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION: FORMAL TITLE PAGE -->
+    <section class="dossier-hero">
+      <div class="container dossier-hero-content">
+        <p
+          class="page-subtitle"
+          data-lang-id="Sebuah Arsip Pribadi"
+          data-lang-en="A Personal Archive"
+        >
+          A Personal Archive
+        </p>
+        <div class="title-ornament"></div>
+        <h1 class="page-title">
+          <span
+            data-lang-id="Pemikiran, Refleksi,"
+            data-lang-en="Thoughts, Reflections,"
+            >Thoughts, Reflections,</span
+          ><br />
+          <span data-lang-id="dan Proses" data-lang-en="and the Process of"
+            >and the Process of</span
+          >
+          <span class="italic" data-lang-id="Menjadi" data-lang-en="Become"
+            >Become</span
+          >
+        </h1>
+      </div>
+    </section>
+
+    <!-- BIOGRAPHICAL INTRODUCTION SECTION -->
+    <section class="dossier-section">
+      <div class="container intro-academic">
+        <div class="intro-text academic-text">
+          <h2
+            class="cv-section-title"
+            data-lang-id="Pengantar Arsip"
+            data-lang-en="Archive Introduction"
+          >
+            Archive Introduction
+          </h2>
+          <p
+            class="drop-cap"
+            data-lang-id="Laman ini saya tulis sebagai catatan pribadi—sebuah upaya untuk membuka kembali halaman-halaman pengalaman empiris, pemikiran, dan diskusi yang rasanya sayang jika hilang begitu saja tanpa jejak."
+            data-lang-en="This page is written as a personal record—an attempt to reopen pages of empirical experiences, thoughts, and discussions that would be unfortunate to let fade away without leaving a trace."
+          >
+            This page is written as a personal record—an attempt to reopen pages
+            of empirical experiences, thoughts, and discussions that would be
+            unfortunate to let fade away without leaving a trace.
+          </p>
+          <p
+            data-lang-id="Tulisan ini tidak saya maksudkan sebagai ringkasan akademis yang rumit, melainkan sebagai kumpulan refleksi, pandangan, dan pendapat pribadi yang ringan serta subjektif. Sebagian mungkin lahir dari pengalaman, sebagian dari kegelisahan, dan sebagian lagi dari percakapan yang meninggalkan kesan. Saya sendiri tidak tahu sampai sejauh mana isi kepala ini dapat saya tuangkan di sini. Namun, selama masih ada ruang untuk menulis dan mengingat, saya akan berusaha menyusunnya menjadi dokumentasi yang terstruktur, utuh, dan dapat saya kunjungi kembali suatu hari nanti."
+            data-lang-en="I do not intend to write this as a complex academic summary, but rather as a collection of reflections, perspectives, and personal opinions that are light in tone and inherently subjective. Some may emerge from experience, others from contemplation, and some from conversations that left a lasting impression. I do not know how far I will be able to translate what is on my mind into words here, but I will try to arrange it into a structured and comprehensive documentation that I can return to in the future."
+          >
+            I do not intend to write this as a complex academic summary, but
+            rather as a collection of reflections, perspectives, and personal
+            opinions that are light in tone and inherently subjective. Some may
+            emerge from experience, others from contemplation, and some from
+            conversations that left a lasting impression. I do not know how far
+            I will be able to translate what is on my mind into words here, but
+            I will try to arrange it into a structured and comprehensive
+            documentation that I can return to in the future.
+          </p>
+        </div>
+        <div class="intro-image-formal">
+          <img src="images/bw.png" alt="Alvin Wildan Sahli Portrait" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION: FEATURED NOTES -->
+    <section class="dossier-section bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-lang-id="Catatan Pilihan" data-lang-en="Featured Notes">
+            Featured Notes
+          </h2>
+          <a href="notes.html" class="view-all">
+            <span data-lang-id="Jelajahi Catatan" data-lang-en="Explore Notes"
+              >Explore Notes</span
+            >
+            &rarr;
+          </a>
+        </div>
+
+        <div class="dossier-grid">
+          <article class="dossier-card border-crimson">
+            <span
+              class="category"
+              data-lang-id="Dinamika Iklim"
+              data-lang-en="Climate Dynamics"
+              >Climate Dynamics</span
+            >
+            <h3
+              class="serif-title"
+              data-lang-id="Kecemasan Ekologis di Komunitas Pesisir"
+              data-lang-en="Climate Anxiety in Coastal Communities"
+            >
+              Climate Anxiety in Coastal Communities
+            </h3>
+            <p
+              data-lang-id="Eksplorasi struktural mengenai bagaimana variabilitas iklim lingkungan, ancaman kenaikan permukaan air laut, dan pergeseran konstan mata pencaharian membentuk manajemen risiko fungsional di wilayah intertidal."
+              data-lang-en="A structural evaluation of how environmental variability, sea-level rise risks, and constant livelihood shifts shape functional vulnerability management in dynamic intertidal regions."
+            >
+              A structural evaluation of how environmental variability,
+              sea-level rise risks, and constant livelihood shifts shape
+              functional vulnerability management in dynamic intertidal regions.
+            </p>
+          </article>
+
+          <article class="dossier-card border-crimson">
+            <span
+              class="category"
+              data-lang-id="Metodologi Observasi"
+              data-lang-en="Observational Methodology"
+              >Observational Methodology</span
+            >
+            <h3
+              class="serif-title"
+              data-lang-id="Menyaksikan Perubahan Muka Air"
+              data-lang-en="Witnessing the Changing Tides"
+            >
+              Witnessing the Changing Tides
+            </h3>
+            <p
+              data-lang-id="Pemodelan iklim dan observasi empiris seringkali mereduksi lautan menjadi deretan angka dalam matriks. Realitas fisik sedang mendefinisikan ulang batas ruang hidup manusia dan ekosistem."
+              data-lang-en="Climate modeling often reduces the ocean to matrix arrays. Yet, sea-level rise is a physical reality redefining the boundary between human habitats and coastal ecosystems."
+            >
+              Climate modeling often reduces the ocean to matrix arrays. Yet,
+              sea-level rise is a physical reality redefining the boundary
+              between human habitats and coastal ecosystems.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION: RECENT JOURNEYS -->
+    <section class="dossier-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-lang-id="Perjalanan Terkini" data-lang-en="Recent Journeys">
+            Recent Journeys
+          </h2>
+          <a href="journeys.html" class="view-all">
+            <span data-lang-id="Lihat Rekam Jejak" data-lang-en="View Logbook"
+              >View Logbook</span
+            >
+            &rarr;
+          </a>
+        </div>
+
+        <div class="dossier-grid">
+          <article class="dossier-card border-gold">
+            <span
+              class="category"
+              data-lang-id="Simposium Internasional"
+              data-lang-en="International Conference"
+              >International Conference</span
+            >
+            <h3
+              class="serif-title"
+              data-lang-id="Diseminasi Hasil Riset Pertama"
+              data-lang-en="Presenting My First Paper"
+            >
+              Presenting My First Paper
+            </h3>
+            <p
+              data-lang-id="Refleksi mengenai standardisasi metodologi riset, membangun kemitraan saintifik lintas kultur, dan memetakan ketidakpastian data di panggung global."
+              data-lang-en="Reflections on research methodological standards, building cross-cultural scientific partnerships, and mapping data uncertainties on the global stage."
+            >
+              Reflections on research methodological standards, building
+              cross-cultural scientific partnerships, and mapping data
+              uncertainties on the global stage.
+            </p>
+          </article>
+
+          <article class="dossier-card border-gold">
+            <span
+              class="category"
+              data-lang-id="Program Internasional"
+              data-lang-en="International Program"
+              >International Program</span
+            >
+            <h3
+              class="serif-title"
+              data-lang-id="Eksplorasi Sains Mitigasi di Jepang"
+              data-lang-en="Mitigation Science in Japan"
+            >
+              Mitigation Science in Japan
+            </h3>
+            <p
+              data-lang-id="Internalisasi sistem pengelolaan kebencanaan pesisir, rasa ingin tahu ilmiah, dan adopsi kerangka kerja teknologi di luar batas ruang kelas."
+              data-lang-en="Internalization of coastal disaster management pipelines, rigorous scientific curiosity, and technology framework adoptions beyond typical classroom boundaries."
+            >
+              Internalization of coastal disaster management pipelines, rigorous
+              scientific curiosity, and technology framework adoptions beyond
+              typical classroom boundaries.
+            </p>
+          </article>
+
+          <article class="dossier-card border-gold">
+            <span
+              class="category"
+              data-lang-id="Aksi Komunitas"
+              data-lang-en="Community Engagement"
+              >Community Engagement</span
+            >
+            <h3
+              class="serif-title"
+              data-lang-id="Integrasi Sistem Pengetahuan Lokal"
+              data-lang-en="Integrating Local Knowledge"
+            >
+              Integrating Local Knowledge
+            </h3>
+            <p
+              data-lang-id="Pentingnya analisis rona awal lapangan secara partisipatif dan proses penyerapan kearifan lokal sebelum perumusan regulasi lingkungan."
+              data-lang-en="The baseline significance of participatory fieldwork and absorbing localized ecological wisdom parameters prior to finalizing structural governance models."
+            >
+              The baseline significance of participatory fieldwork and absorbing
+              localized ecological wisdom parameters prior to finalizing
+              structural governance models.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER RESMI -->
+    <footer class="university-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand-block">
+            <h3 class="footer-brand serif">WTU</h3>
+            <p
+              class="footer-tagline"
+              data-lang-id="Sebuah kontinuitas narasi pemikiran saintifik dan metodologi lapangan."
+              data-lang-en="An ongoing continuum of scientific thoughts and field methodologies."
+            >
+              An ongoing continuum of scientific thoughts and field
+              methodologies.
+            </p>
+          </div>
+
+          <div
+            class="footer-links-group"
+            style="display: flex; gap: 4rem; justify-content: flex-end"
+          >
+            <div>
+              <h4 data-lang-id="Navigasi" data-lang-en="Explore">Explore</h4>
+              <ul>
+                <li>
+                  <a
+                    href="notes.html"
+                    data-lang-id="Catatan"
+                    data-lang-en="Notes"
+                    >Notes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="library.html"
+                    data-lang-id="Pustaka"
+                    data-lang-en="Library"
+                    >Library</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="profile.html"
+                    data-lang-id="Profil"
+                    data-lang-en="Profile"
+                    >Profile</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 data-lang-id="Jaringan" data-lang-en="Connect">Connect</h4>
+              <ul>
+                <li><a href="mailto:alvinwildansahli@gmail.com">Email</a></li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/alvinwildans"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/alvinwildans"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Instagram</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; 2026 Alvin Wildan Sahli. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- DUAL-LANGUAGE TOGGLE CONTROLLER ENGINE -->
+    <script>
+      function switchLanguage(lang) {
+        document
+          .querySelectorAll(".lang-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        document.getElementById(`btn-${lang}`).classList.add("active");
+        document.documentElement.lang = lang;
+
+        const elementsToTranslate = document.querySelectorAll("[data-lang-id]");
+        elementsToTranslate.forEach((el) => {
+          if (lang === "id") {
+            el.textContent = el.getAttribute("data-lang-id");
+          } else if (lang === "en") {
+            el.textContent = el.getAttribute("data-lang-en");
+          }
+        });
+      }
+    </script>
+
+    <!-- SCROLL ANIMATION ENGINE FOR DOSSIER HERO -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hero = document.querySelector(".dossier-hero");
+
+        // Jalankan animasi pertama kali saat web dibuka
+        setTimeout(() => {
+          hero.classList.add("animate-active");
+        }, 100);
+
+        // Deteksi scroll
+        window.addEventListener("scroll", function () {
+          const heroHeight = hero.offsetHeight;
+          const currentScroll = window.scrollY;
+
+          if (currentScroll > heroHeight * 0.6) {
+            hero.classList.remove("animate-active");
+          } else if (currentScroll < heroHeight * 0.2) {
+            if (!hero.classList.contains("animate-active")) {
+              hero.classList.add("animate-active");
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
