@@ -127,6 +127,98 @@
         </div>
       </div>
     </section>
+    <div class="sticky-video-wrapper">
+      <section class="video-showcase-section">
+        <div class="video-composition-container">
+          <!-- Kartu Video di belakang -->
+          <div class="main-video-card">
+            <video
+              id="cardVideo"
+              class="card-video-element"
+              autoplay
+              loop
+              playsinline
+              muted
+            >
+              <!-- Pastikan convert ke MP4 untuk kompatibilitas audio maksimal di browser -->
+              <source
+                src="videos/PASIR EURIH AFTER MOVIE.mov"
+                type="video/mp4"
+              />
+            </video>
+
+            <button id="soundToggleCard" class="modern-sound-toggle">
+              <svg
+                id="icon-muted"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="square"
+              >
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <line x1="23" y1="9" x2="17" y2="15"></line>
+                <line x1="17" y1="9" x2="23" y2="15"></line>
+              </svg>
+              <svg
+                id="icon-unmuted"
+                style="display: none"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="square"
+              >
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+              </svg>
+            </button>
+          </div>
+
+          <div class="glass-text-card">
+            <span
+              class="video-tagline"
+              data-lang-id="Arsip Perjalanan"
+              data-lang-en="The Journey Archives"
+            >
+              The Journey Archives
+            </span>
+
+            <h2
+              class="video-title"
+              data-lang-id="After Movie SUIJI SLP 2025 - ID"
+              data-lang-en="SUIJI SLP 2025 After Movie"
+            >
+              After Movie SUIJI SLP 2025 - ID
+            </h2>
+
+            <div class="bilingual-desc">
+              <p
+                class="desc-id"
+                data-lang-id="Sebuah catatan perjalanan dan interaksi sosial bersama masyarakat Desa Pasir Eurih. Melalui program Six University Initiative, kami belajar lebih dalam mengenai kesederhanaan, budaya, serta kehidupan pedesaan yang penuh makna."
+                data-lang-en="A travelogue capturing social interactions with the people of Pasir Eurih Village. Through the Six University Initiative, we learned deeply about simplicity, local culture, and a meaningful rural life."
+              >
+                A travelogue capturing social interactions with the people of
+                Pasir Eurih Village. Through the Six University Initiative, we
+                learned deeply about simplicity, local culture, and a meaningful
+                rural life.
+              </p>
+            </div>
+
+            <a
+              href="https://drive.google.com/drive/folders/1h8Dj4cPqp-ePK_g5rCTkdcHQuV38yKYN"
+              target="_blank"
+              class="video-link-btn"
+              data-lang-id="Tonton Video Lengkap"
+              data-lang-en="Watch Full Video"
+            >
+              Watch Full Video
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
 
     <!-- CONTENT SECTION: FEATURED NOTES -->
     <section class="dossier-section bg-alt">
@@ -428,6 +520,23 @@
             link.classList.add("active");
           }
         });
+      });
+
+      const videoCard = document.getElementById("cardVideo");
+      const soundBtnCard = document.getElementById("soundToggleCard");
+      const iconMuted = document.getElementById("icon-muted");
+      const iconUnmuted = document.getElementById("icon-unmuted");
+
+      soundBtnCard.addEventListener("click", () => {
+        if (videoCard.muted) {
+          videoCard.muted = false;
+          iconMuted.style.display = "none";
+          iconUnmuted.style.display = "block";
+        } else {
+          videoCard.muted = true;
+          iconMuted.style.display = "block";
+          iconUnmuted.style.display = "none";
+        }
       });
     </script>
   </body>
