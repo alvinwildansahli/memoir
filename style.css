@@ -1831,33 +1831,76 @@ img {
 }
 
 /* Penempatan Posisi (The "Scattered" Look) */
-.article-1 {
-  grid-column: 1 / 8; /* Kiri, besar */
-  margin-top: 2rem;
+/* Penempatan Posisi (Telah dibalik urutannya: Artikel atas bernomor besar, artikel bawah bernomor kecil) */
+
+/* =========================================================
+   PENEMPATAN POSISI ASIMETRIS (THE "SCATTERED" LOOK)
+   Logika: Artikel baru (angka besar) di atas, menyebar 
+   ke bawah, ruang kosong diisi oleh kutipan emas (quotes).
+========================================================= */
+
+/* ARTIKEL 5 (Paling Atas) - Dominasi Kiri */
+.article-5 {
+  grid-column: 1 / 8;
+  margin-top: 0;
 }
 
-.article-2 {
-  grid-column: 8 / 13; /* Kanan, lebih kecil */
-  margin-top: -6rem; /* Tarik ke atas agar overlap asimetris */
+/* QUOTE 4 (Insight Baru) - Mengisi ruang kosong di kanan Artikel 5 */
+.quote-4 {
+  grid-column: 8 / 13;
+  margin-top: 10rem;
 }
 
-.quote-1 {
-  grid-column: 2 / 12; /* Tengah melebar */
-  margin: 6rem 0 4rem 0;
-}
-
-.article-3 {
-  grid-column: 2 / 9; /* Kiri, menjorok ke tengah */
-}
-
+/* ARTIKEL 4 (Refleksi GSDC) - Menjorok ke Kanan */
 .article-4 {
-  grid-column: 7 / 13; /* Kanan bawah, besar */
+  grid-column: 5 / 13;
+  margin-top: 4rem;
+}
+
+/* QUOTE 3 (Insight Baru) - Mengisi ruang kosong di kiri Artikel 4 */
+.quote-3 {
+  grid-column: 1 / 4;
+  margin-top: -6rem;
+}
+
+/* ARTIKEL 3 (Sumur Jalatunda) - Kembali ke Kiri */
+.article-3 {
+  grid-column: 1 / 8;
+  margin-top: 6rem;
+}
+
+/* QUOTE 2 (Eksisting: Pendidikan) - Mengisi ruang di kanan Artikel 3 */
+.quote-2 {
+  grid-column: 8 / 13;
+  margin-top: -4rem;
+}
+
+/* ARTIKEL 2 (Crossroad Pendidikan) - Posisi Tengah Melebar */
+.article-2 {
+  grid-column: 3 / 11;
   margin-top: 8rem;
 }
 
-.quote-2 {
+/* ARTIKEL 1 (Urban Heat - Paling Bawah) - Kembali dominasi Kiri */
+.article-1 {
+  grid-column: 1 / 9;
+  margin-top: 6rem;
+}
+
+/* QUOTE 1 (Eksisting: Parallax Divider Paling Bawah) */
+.quote-1 {
   grid-column: 1 / 13;
-  margin: 4rem 0;
+  margin: 8rem 0 4rem 0;
+  text-align: center;
+}
+
+/* Gaya tambahan opsional agar kutipan interstitial terlihat lebih dinamis */
+.interstitial-quote h3 {
+  border-left: 3px solid #d4af37; /* Aksen emas */
+  padding-left: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--text-color, #333);
 }
 
 /* 2. CARD STYLING & SHAPE MORPHING */
