@@ -182,7 +182,7 @@ img {
   /* Background */
   background-image:
     linear-gradient(rgba(30, 18, 18, 0.45), rgba(30, 18, 18, 0.55)),
-    url("../images/library.png");
+    url("images/library.png");
 
   background-size: cover;
   background-position: center;
@@ -1617,14 +1617,156 @@ body {
   line-height: 1.6;
 }
 
+.main-layout {
+  display: flex;
+  gap: 6rem;
+  max-width: 1300px;
+  margin: 5rem auto;
+  padding: 0 4rem;
+  align-items: flex-start;
+}
+
+.profile-container {
+  flex: 0 0 420px;
+  position: sticky;
+  top: 120px;
+}
+
+.profile-photo {
+  width: 240px;
+  background: #ffffff;
+
+  /* Bingkai polaroid */
+  padding: 5px 5px 45px 5px;
+
+  border: 1px solid #e5e5e5;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.04);
+
+  margin: 0 auto 2.5rem;
+
+  transform: rotate(-1deg);
+  transition: all 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: rotate(0deg) translateY(-3px);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.12),
+    0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-container h1 {
+  margin-bottom: -2.5rem;
+  font-size: 2.3rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+.profile-container p {
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.contact-section {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.contact-section h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #777;
+  margin-bottom: 1.2rem;
+}
+.contact-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e8e8e8;
+}
+
+.contact-section h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.contact-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #f7f7f7;
+  border: 1px solid #ececec;
+
+  flex-shrink: 0;
+}
+
+.contact-icon i {
+  color: #8b0000;
+  font-size: 1rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #888;
+  margin-bottom: 0.3rem;
+}
+
+.contact-info a {
+  color: #222;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #8b0000;
+}
+
 .ivy-form-container {
-  max-width: 600px;
-  margin: 4rem auto;
-  padding: 2rem;
+  flex: 1;
+  padding: 2.5rem;
   background: #ffffff;
   border: 1px solid var(--border-color);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
-  border-radius: 4px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 }
 
 .form-header {
@@ -1710,8 +1852,9 @@ textarea {
   cursor: pointer;
   font-weight: normal;
 }
+
 .submit-btn {
-  background-color: var(--text-main);
+  background-color: var(--accent-crimson);
   color: #ffffff;
   border: 1px solid var(--text-main);
   border-radius: 4px; /* Memberikan sudut yang sedikit lebih lembut */

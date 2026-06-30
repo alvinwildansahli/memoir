@@ -11,7 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
   </head>
   <body>
     <header class="site-header">
@@ -72,24 +76,15 @@
     <section class="ivy-header" id="dynamic-header">
       <div class="ivy-container">
         <!-- Subtitle dengan aksen garis -->
-        <div class="subtitle-wrapper reveal-item">
-          <span
-            class="subtitle-text translatable"
-            data-id="Tentang Saya"
-            data-en="About Me"
-          >
-            About Me
-          </span>
-        </div>
 
         <!-- Title utama -->
         <div class="title-wrapper">
           <h1
             class="main-title reveal-item translatable"
-            data-id="Jejak & Cerita"
-            data-en="Journey & Story"
+            data-id="Tentang Saya"
+            data-en="About Me"
           >
-            Journey & Story
+            About Me
           </h1>
         </div>
 
@@ -98,121 +93,247 @@
       </div>
     </section>
 
-    <section class="ivy-form-container">
-      <div class="form-header">
-        <h2
-          class="translatable"
-          data-id="Umpan Balik, Kolaborasi & Pertanyaan"
-          data-en="Feedback, Collaboration & Inquiry"
-        >
-          Feedback, Collaboration & Inquiry
-        </h2>
-        <p
-          class="translatable"
-          data-id="Jika Anda ingin berbagi umpan balik, bertanya, mendiskusikan ide, atau menjajaki potensi kolaborasi, silakan tinggalkan pesan di bawah. Saya membaca setiap pesan yang masuk."
-          data-en="If you would like to share feedback, ask a question, discuss an idea, or explore a potential collaboration, feel free to leave a message below. I read every message and appreciate the time taken to write."
-        >
-          If you would like to share feedback, ask a question, discuss an idea,
-          or explore a potential collaboration, feel free to leave a message
-          below. I read every message and appreciate the time taken to write.
-        </p>
-      </div>
+    <main class="main-layout">
+      <aside class="profile-container">
+        <div class="profile-photo">
+          <img src="images/alvin.jpg" alt="Alvin Wildan Sahli" />
+        </div>
+        <h1>Alvin Wildan Sahli</h1>
+        <div class="contact-section">
+          <h3
+            class="translatable"
+            data-id="Kontak & Jejaring"
+            data-en="Contact & Network"
+          >
+            Contact & Network
+          </h3>
 
-      <form id="contactForm">
-        <div class="form-row">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+
+            <div class="contact-info">
+              <span
+                class="contact-label translatable"
+                data-id="Email"
+                data-en="Email"
+              >
+                Email
+              </span>
+
+              <a href="mailto:alvinalvin@apps.ipb.ac.id">
+                alvinalvin@apps.ipb.ac.id
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+
+            <div class="contact-info">
+              <span
+                class="contact-label translatable"
+                data-id="WhatsApp"
+                data-en="WhatsApp"
+              >
+                WhatsApp
+              </span>
+
+              <a href="https://wa.me/6281575431109" target="_blank">
+                +62 815-7543-1109
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+
+            <div class="contact-info">
+              <span
+                class="contact-label translatable"
+                data-id="LinkedIn"
+                data-en="LinkedIn"
+              >
+                LinkedIn
+              </span>
+
+              <a
+                href="https://www.linkedin.com/in/alvinwildans"
+                target="_blank"
+              >
+                linkedin.com/in/alvinwildans
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-instagram"></i>
+            </div>
+
+            <div class="contact-info">
+              <span
+                class="contact-label translatable"
+                data-id="Instagram"
+                data-en="Instagram"
+              >
+                Instagram
+              </span>
+
+              <a href="https://www.instagram.com/alvinwildans" target="_blank">
+                @alvinwildans
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-file-alt"></i>
+            </div>
+
+            <div class="contact-info">
+              <span
+                class="contact-label translatable"
+                data-id="Curriculum Vitae"
+                data-en="Curriculum Vitae"
+              >
+                Curriculum Vitae
+              </span>
+
+              <a
+                href="https://drive.google.com/file/d/1s6tH0yJ5J3Afce8nCg-CUkUm68FbZwTD/view?usp=sharing"
+                target="_blank"
+              >
+                View CV
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <section class="ivy-form-container">
+        <div class="form-header">
+          <h2
+            class="translatable"
+            data-id="Umpan Balik, Kolaborasi & Pertanyaan"
+            data-en="Feedback, Collaboration & Inquiry"
+          >
+            Feedback, Collaboration & Inquiry
+          </h2>
+          <p
+            class="translatable"
+            data-id="Jika Anda ingin berbagi umpan balik, bertanya, mendiskusikan ide, atau menjajaki potensi kolaborasi, silakan tinggalkan pesan di bawah. Saya membaca setiap pesan yang masuk."
+            data-en="If you would like to share feedback, ask a question, discuss an idea, or explore a potential collaboration, feel free to leave a message below. I read every message and appreciate the time taken to write."
+          >
+            If you would like to share feedback, ask a question, discuss an
+            idea, or explore a potential collaboration, feel free to leave a
+            message below. I read every message and appreciate the time taken to
+            write.
+          </p>
+        </div>
+
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label
+                class="translatable"
+                data-id="Nama Depan (Opsional)"
+                data-en="First Name (Optional)"
+                >First Name (Optional)</label
+              >
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="Jane"
+              />
+            </div>
+            <div class="form-group">
+              <label
+                class="translatable"
+                data-id="Nama Belakang (Opsional)"
+                data-en="Last Name (Optional)"
+                >Last Name (Optional)</label
+              >
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Doe"
+              />
+            </div>
+          </div>
+
           <div class="form-group">
             <label
               class="translatable"
-              data-id="Nama Depan (Opsional)"
-              data-en="First Name (Optional)"
-              >First Name (Optional)</label
+              data-id="Email Anda (Opsional)"
+              data-en="Your Email (Optional)"
+              >Your Email (Optional)</label
             >
             <input
-              type="text"
-              id="firstName"
-              name="firstName"
-              placeholder="Jane"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@example.com"
             />
           </div>
+
           <div class="form-group">
             <label
               class="translatable"
-              data-id="Nama Belakang (Opsional)"
-              data-en="Last Name (Optional)"
-              >Last Name (Optional)</label
+              data-id="Bagaimana harimu sejauh ini?"
+              data-en="How's your day going so far?"
+              >How's your day going so far?</label
             >
-            <input
-              type="text"
-              id="lastName"
-              name="lastName"
-              placeholder="Doe"
-            />
+            <select id="rating" name="rating">
+              <option
+                value=""
+                disabled
+                selected
+                class="translatable"
+                data-id="Pilih penilaian..."
+                data-en="Select a rating..."
+              >
+                Select a rating...
+              </option>
+              <option value="4">Excellent</option>
+              <option value="3">Good</option>
+              <option value="2">Average</option>
+              <option value="1">Needs Improvement</option>
+            </select>
           </div>
-        </div>
 
-        <div class="form-group">
-          <label
-            class="translatable"
-            data-id="Email Anda (Opsional)"
-            data-en="Your Email (Optional)"
-            >Your Email (Optional)</label
-          >
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="example@example.com"
-          />
-        </div>
-
-        <div class="form-group">
-          <label
-            class="translatable"
-            data-id="Bagaimana Anda menilai pengalaman Anda secara keseluruhan?"
-            data-en="How would you rate your overall experience?"
-            >How would you rate your overall experience?</label
-          >
-          <select id="rating" name="rating">
-            <option
-              value=""
-              disabled
-              selected
+          <div class="form-group">
+            <label
               class="translatable"
-              data-id="Pilih penilaian..."
-              data-en="Select a rating..."
+              data-id="Silakan tulis pesan Anda *"
+              data-en="Please share your message *"
+              >Please share your message *</label
             >
-              Select a rating...
-            </option>
-            <option value="4">Excellent</option>
-            <option value="3">Good</option>
-            <option value="2">Average</option>
-            <option value="1">Needs Improvement</option>
-          </select>
-        </div>
+            <textarea id="message" name="message" required></textarea>
+          </div>
 
-        <div class="form-group">
-          <label
-            class="translatable"
-            data-id="Silakan tulis pesan Anda *"
-            data-en="Please share your message *"
-            >Please share your message *</label
+          <button
+            type="submit"
+            id="submitBtn"
+            class="submit-btn translatable"
+            data-id="Kirim Pesan"
+            data-en="Send Message"
           >
-          <textarea id="message" name="message" required></textarea>
-        </div>
+            Send Message
+          </button>
 
-        <button
-          type="submit"
-          id="submitBtn"
-          class="submit-btn translatable"
-          data-id="Kirim Pesan"
-          data-en="Send Message"
-        >
-          Send Message
-        </button>
+          <div id="statusMessage"></div>
+        </form>
+      </section>
+    </main>
 
-        <div id="statusMessage"></div>
-      </form>
-    </section>
     <footer class="site-footer">
       <div class="container">
         <div class="footer-layout">
@@ -297,6 +418,6 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="../main.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
