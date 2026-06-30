@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WTU | A Personal Archive</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav">
+        <div class="nav-logo">
+          <a href="index.html" class="brand-text">WTU</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a
+              href="note.html"
+              class="translatable"
+              data-en="Notes"
+              data-id="Catatan"
+              >Notes</a
+            >
+          </li>
+          <li>
+            <a
+              href="library.html"
+              class="translatable"
+              data-en="Library"
+              data-id="Perpustakaan"
+              >Library</a
+            >
+          </li>
+          <li>
+            <a
+              href="profile.html"
+              class="translatable"
+              data-en="Profile"
+              data-id="Profil"
+              >Profile</a
+            >
+          </li>
+          <li class="lang-menu">
+            <div class="lang-switcher">
+              <button
+                class="lang-btn"
+                id="btn-id"
+                onclick="switchLanguage('id')"
+              >
+                ID
+              </button>
+              <span class="lang-divider">|</span>
+              <button
+                class="lang-btn active"
+                id="btn-en"
+                onclick="switchLanguage('en')"
+              >
+                EN
+              </button>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero-section">
+      <div class="container hero-content">
+        <p
+          class="hero-subtitle translatable"
+          data-en="A Personal Archive"
+          data-id="Sebuah Arsip Personal"
+        >
+          A Personal Archive
+        </p>
+        <h1 class="hero-title">
+          <span
+            class="translatable"
+            data-en="Thoughts, Reflections,"
+            data-id="Pemikiran, Refleksi,"
+            >Thoughts, Reflections,</span
+          ><br />
+          <span
+            class="translatable"
+            data-en="and the Process of"
+            data-id="dan Proses untuk"
+            >and the Process of</span
+          >
+          <span class="italic translatable" data-en="Become" data-id="Menjadi"
+            >Become</span
+          >
+        </h1>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container intro-layout">
+        <div class="intro-text">
+          <h2
+            class="section-title translatable"
+            data-en="Archive Introduction"
+            data-id="Pengantar Arsip"
+          >
+            Archive Introduction
+          </h2>
+          <p
+            class="drop-cap translatable"
+            data-en="This page is written as a personal record—an attempt to reopen pages of empirical experiences, thoughts, and discussions that would be unfortunate to let fade away without leaving a trace."
+            data-id="Halaman ini ditulis sebagai catatan pribadi—sebuah upaya untuk membuka kembali lembaran pengalaman empiris, pemikiran, dan diskusi yang sayang jika dibiarkan memudar tanpa jejak."
+          >
+            This page is written as a personal record—an attempt to reopen pages
+            of empirical experiences, thoughts, and discussions that would be
+            unfortunate to let fade away without leaving a trace.
+          </p>
+          <p
+            class="translatable"
+            data-en="I do not intend to write this as a complex academic summary, but rather as a collection of reflections, perspectives, and personal opinions that are light in tone and inherently subjective. Some may emerge from experience, others from contemplation, and some from conversations that left a lasting impression. I do not know how far I will be able to translate what is on my mind into words here, but I will try to arrange it into a structured and comprehensive documentation that I can return to in the future."
+            data-id="Saya tidak bermaksud menulis ini sebagai ringkasan akademis yang rumit, melainkan sebagai kumpulan refleksi, perspektif, dan opini pribadi yang ringan dan melekat pada subjektivitas. Beberapa mungkin muncul dari pengalaman, yang lain dari kontemplasi, dan beberapa dari percakapan yang meninggalkan kesan mendalam. Saya tidak tahu sejauh mana saya dapat menerjemahkan isi pikiran saya ke dalam kata-kata di sini, tetapi saya akan mencoba menyusunnya menjadi dokumentasi yang terstruktur agar dapat saya kunjungi kembali di masa depan."
+          >
+            I do not intend to write this as a complex academic summary, but
+            rather as a collection of reflections, perspectives, and personal
+            opinions that are light in tone and inherently subjective. Some may
+            emerge from experience, others from contemplation, and some from
+            conversations that left a lasting impression. I do not know how far
+            I will be able to translate what is on my mind into words here, but
+            I will try to arrange it into a structured and comprehensive
+            documentation that I can return to in the future.
+          </p>
+        </div>
+        <div class="intro-image">
+          <img src="../images/bw.png" alt="Alvin Wildan Sahli Portrait" />
+        </div>
+      </div>
+    </section>
+
+    <div class="video-wrapper">
+      <section class="video-showcase">
+        <div class="video-container">
+          <div class="video-player">
+            <video
+              id="cardVideo"
+              class="video-element"
+              autoplay
+              loop
+              playsinline
+              muted
+            >
+              <source src="../videos/After Movie.mov" type="video/mp4" />
+            </video>
+            <button id="soundToggleCard" class="sound-toggle-btn">
+              <svg
+                id="icon-muted"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="square"
+              >
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <line x1="23" y1="9" x2="17" y2="15"></line>
+                <line x1="17" y1="9" x2="23" y2="15"></line>
+              </svg>
+              <svg
+                id="icon-unmuted"
+                style="display: none"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="square"
+              >
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="glass-text-card">
+            <span
+              class="video-tagline translatable"
+              data-id="Arsip Perjalanan"
+              data-en="The Journey Archives"
+            >
+              The Journey Archives
+            </span>
+
+            <h2
+              class="video-title translatable"
+              data-id="After Movie SUIJI SLP 2025 - ID"
+              data-en="SUIJI SLP 2025 After Movie"
+            >
+              After Movie SUIJI SLP 2025 - ID
+            </h2>
+
+            <p
+              class="desc-id translatable"
+              data-id="Sebuah catatan perjalanan dan interaksi sosial bersama masyarakat Desa Pasir Eurih. Melalui program Six University Initiative, kami belajar lebih dalam mengenai kesederhanaan, budaya, serta kehidupan pedesaan yang penuh makna."
+              data-en="A travelogue capturing social interactions with the people of Pasir Eurih Village. Through the Six University Initiative, we learned deeply about simplicity, local culture, and a meaningful rural life."
+            >
+              A travelogue capturing social interactions with the people of
+              Pasir Eurih Village. Through the Six University Initiative, we
+              learned deeply about simplicity, local culture, and a meaningful
+              rural life.
+            </p>
+
+            <a
+              href="https://drive.google.com/drive/folders/1h8Dj4cPqp-ePK_g5rCTkdcHQuV38yKYN"
+              target="_blank"
+              class="video-link-btn translatable"
+              data-id="Tonton Video Lengkap"
+              data-en="Watch Full Video"
+            >
+              Watch Full Video
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="content-section bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2
+            class="translatable"
+            data-en="Featured Notes"
+            data-id="Catatan Pilihan"
+          >
+            Featured Notes
+          </h2>
+          <a href="note.html" class="view-all-link">
+            <span
+              class="translatable"
+              data-en="Explore Notes"
+              data-id="Jelajahi Catatan"
+              >Explore Notes</span
+            >
+            &rarr;
+          </a>
+        </div>
+
+        <div class="card-grid">
+          <article class="archive-card accent-crimson">
+            <span
+              class="card-category translatable"
+              data-en="Climate Dynamics"
+              data-id="Dinamika Iklim"
+              >Climate Dynamics</span
+            >
+            <h3
+              class="card-title translatable"
+              data-en="Climate Anxiety in Coastal Communities"
+              data-id="Kecemasan Iklim di Masyarakat Pesisir"
+            >
+              Climate Anxiety in Coastal Communities
+            </h3>
+            <p
+              class="translatable"
+              data-en="A structural evaluation of how environmental variability, sea-level rise risks, and constant livelihood shifts shape functional vulnerability management in dynamic intertidal regions."
+              data-id="Evaluasi struktural tentang bagaimana variabilitas lingkungan, risiko kenaikan muka air laut, dan pergeseran mata pencaharian yang konstan membentuk manajemen kerentanan fungsional di wilayah intertidal yang dinamis."
+            >
+              A structural evaluation of how environmental variability,
+              sea-level rise risks, and constant livelihood shifts shape
+              functional vulnerability management in dynamic intertidal regions.
+            </p>
+          </article>
+
+          <article class="archive-card accent-crimson">
+            <span
+              class="card-category translatable"
+              data-en="Observational Methodology"
+              data-id="Metodologi Observasional"
+              >Observational Methodology</span
+            >
+            <h3
+              class="card-title translatable"
+              data-en="Witnessing the Changing Tides"
+              data-id="Menyaksikan Pasang Surut yang Berubah"
+            >
+              Witnessing the Changing Tides
+            </h3>
+            <p
+              class="translatable"
+              data-en="Climate modeling often reduces the ocean to matrix arrays. Yet, sea-level rise is a physical reality redefining the boundary between human habitats and coastal ecosystems."
+              data-id="Pemodelan iklim seringkali mereduksi lautan menjadi susunan matriks. Namun, kenaikan muka air laut adalah realitas fisik yang mendefinisikan ulang batas antara habitat manusia dan ekosistem pesisir."
+            >
+              Climate modeling often reduces the ocean to matrix arrays. Yet,
+              sea-level rise is a physical reality redefining the boundary
+              between human habitats and coastal ecosystems.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="section-header">
+          <h2
+            class="translatable"
+            data-en="Recent Journeys"
+            data-id="Perjalanan Terbaru"
+          >
+            Recent Journeys
+          </h2>
+          <a href="journeys.html" class="view-all-link">
+            <span
+              class="translatable"
+              data-en="View Logbook"
+              data-id="Lihat Buku Catatan"
+              >View Logbook</span
+            >
+            &rarr;
+          </a>
+        </div>
+
+        <div class="card-grid">
+          <article class="archive-card accent-gold">
+            <span
+              class="card-category translatable"
+              data-en="International Conference"
+              data-id="Konferensi Internasional"
+              >International Conference</span
+            >
+            <h3
+              class="card-title translatable"
+              data-en="Presenting My First Paper"
+              data-id="Mempresentasikan Makalah Pertamaku"
+            >
+              Presenting My First Paper
+            </h3>
+            <p
+              class="translatable"
+              data-en="Reflections on research methodological standards, building cross-cultural scientific partnerships, and mapping data uncertainties on the global stage."
+              data-id="Refleksi mengenai standar metodologi penelitian, membangun kemitraan ilmiah lintas budaya, dan memetakan ketidakpastian data di panggung global."
+            >
+              Reflections on research methodological standards, building
+              cross-cultural scientific partnerships, and mapping data
+              uncertainties on the global stage.
+            </p>
+          </article>
+
+          <article class="archive-card accent-gold">
+            <span
+              class="card-category translatable"
+              data-en="International Program"
+              data-id="Program Internasional"
+              >International Program</span
+            >
+            <h3
+              class="card-title translatable"
+              data-en="Mitigation Science in Japan"
+              data-id="Sains Mitigasi di Jepang"
+            >
+              Mitigation Science in Japan
+            </h3>
+            <p
+              class="translatable"
+              data-en="Internalization of coastal disaster management pipelines, rigorous scientific curiosity, and technology framework adoptions beyond typical classroom boundaries."
+              data-id="Internalisasi alur kerja manajemen bencana pesisir, keingintahuan ilmiah yang ketat, dan adopsi kerangka teknologi di luar batas ruang kelas pada umumnya."
+            >
+              Internalization of coastal disaster management pipelines, rigorous
+              scientific curiosity, and technology framework adoptions beyond
+              typical classroom boundaries.
+            </p>
+          </article>
+
+          <article class="archive-card accent-gold">
+            <span
+              class="card-category translatable"
+              data-en="Community Engagement"
+              data-id="Pemberdayaan Masyarakat"
+              >Community Engagement</span
+            >
+            <h3
+              class="card-title translatable"
+              data-en="Integrating Local Knowledge"
+              data-id="Mengintegrasikan Pengetahuan Lokal"
+            >
+              Integrating Local Knowledge
+            </h3>
+            <p
+              class="translatable"
+              data-en="The baseline significance of participatory fieldwork and absorbing localized ecological wisdom parameters prior to finalizing structural governance models."
+              data-id="Signifikansi dasar dari kerja lapangan partisipatif dan penyerapan parameter kearifan ekologi lokal sebelum merumuskan model tata kelola struktural."
+            >
+              The baseline significance of participatory fieldwork and absorbing
+              localized ecological wisdom parameters prior to finalizing
+              structural governance models.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-layout">
+          <div class="footer-brand">
+            <h3 class="brand-text">WTU</h3>
+            <p
+              class="footer-tagline translatable"
+              data-en="An ongoing continuum of scientific thoughts and field methodologies."
+              data-id="Sebuah kontinum pemikiran ilmiah dan metodologi lapangan yang terus berjalan."
+            >
+              An ongoing continuum of scientific thoughts and field
+              methodologies.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <div class="link-column">
+              <h4 class="translatable" data-en="Explore" data-id="Eksplorasi">
+                Explore
+              </h4>
+              <ul>
+                <li>
+                  <a
+                    href="note.html"
+                    class="translatable"
+                    data-en="Notes"
+                    data-id="Catatan"
+                    >Notes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="library.html"
+                    class="translatable"
+                    data-en="Library"
+                    data-id="Perpustakaan"
+                    >Library</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="profile.html"
+                    class="translatable"
+                    data-en="Profile"
+                    data-id="Profil"
+                    >Profile</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="link-column">
+              <h4 class="translatable" data-en="Connect" data-id="Hubungi">
+                Connect
+              </h4>
+              <ul>
+                <li><a href="mailto:alvinwildansahli@gmail.com">Email</a></li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/alvinwildans"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/alvinwildans"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Instagram</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; 2026 Alvin Wildan Sahli. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../JS/main.js"></script>
+  </body>
+</html>

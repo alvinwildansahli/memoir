@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WTU | A Personal Archive</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav">
+        <div class="nav-logo">
+          <a href="index.html" class="brand-text">WTU</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a
+              href="note.html"
+              class="translatable"
+              data-en="Notes"
+              data-id="Catatan"
+              >Notes</a
+            >
+          </li>
+          <li>
+            <a
+              href="library.html"
+              class="translatable"
+              data-en="Library"
+              data-id="Perpustakaan"
+              >Library</a
+            >
+          </li>
+          <li>
+            <a
+              href="profile.html"
+              class="translatable"
+              data-en="Profile"
+              data-id="Profil"
+              >Profile</a
+            >
+          </li>
+          <li class="lang-menu">
+            <div class="lang-switcher">
+              <button
+                class="lang-btn"
+                id="btn-id"
+                onclick="switchLanguage('id')"
+              >
+                ID
+              </button>
+              <span class="lang-divider">|</span>
+              <button
+                class="lang-btn active"
+                id="btn-en"
+                onclick="switchLanguage('en')"
+              >
+                EN
+              </button>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="ivy-header" id="dynamic-header">
+      <div class="ivy-container">
+        <!-- Subtitle dengan aksen garis -->
+        <div class="subtitle-wrapper reveal-item">
+          <span
+            class="subtitle-text translatable"
+            data-id="Tentang Saya"
+            data-en="About Me"
+          >
+            About Me
+          </span>
+        </div>
+
+        <!-- Title utama -->
+        <div class="title-wrapper">
+          <h1
+            class="main-title reveal-item translatable"
+            data-id="Jejak & Cerita"
+            data-en="Journey & Story"
+          >
+            Journey & Story
+          </h1>
+        </div>
+
+        <!-- Garis aksen Crimson yang akan melebar secara dinamis -->
+        <div class="crimson-line reveal-item"></div>
+      </div>
+    </section>
+
+    <section class="ivy-form-container">
+      <div class="form-header">
+        <h2
+          class="translatable"
+          data-id="Umpan Balik, Kolaborasi & Pertanyaan"
+          data-en="Feedback, Collaboration & Inquiry"
+        >
+          Feedback, Collaboration & Inquiry
+        </h2>
+        <p
+          class="translatable"
+          data-id="Jika Anda ingin berbagi umpan balik, bertanya, mendiskusikan ide, atau menjajaki potensi kolaborasi, silakan tinggalkan pesan di bawah. Saya membaca setiap pesan yang masuk."
+          data-en="If you would like to share feedback, ask a question, discuss an idea, or explore a potential collaboration, feel free to leave a message below. I read every message and appreciate the time taken to write."
+        >
+          If you would like to share feedback, ask a question, discuss an idea,
+          or explore a potential collaboration, feel free to leave a message
+          below. I read every message and appreciate the time taken to write.
+        </p>
+      </div>
+
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label
+              class="translatable"
+              data-id="Nama Depan (Opsional)"
+              data-en="First Name (Optional)"
+              >First Name (Optional)</label
+            >
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              placeholder="Jane"
+            />
+          </div>
+          <div class="form-group">
+            <label
+              class="translatable"
+              data-id="Nama Belakang (Opsional)"
+              data-en="Last Name (Optional)"
+              >Last Name (Optional)</label
+            >
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              placeholder="Doe"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label
+            class="translatable"
+            data-id="Email Anda (Opsional)"
+            data-en="Your Email (Optional)"
+            >Your Email (Optional)</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@example.com"
+          />
+        </div>
+
+        <div class="form-group">
+          <label
+            class="translatable"
+            data-id="Bagaimana Anda menilai pengalaman Anda secara keseluruhan?"
+            data-en="How would you rate your overall experience?"
+            >How would you rate your overall experience?</label
+          >
+          <select id="rating" name="rating">
+            <option
+              value=""
+              disabled
+              selected
+              class="translatable"
+              data-id="Pilih penilaian..."
+              data-en="Select a rating..."
+            >
+              Select a rating...
+            </option>
+            <option value="4">Excellent</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Needs Improvement</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label
+            class="translatable"
+            data-id="Silakan tulis pesan Anda *"
+            data-en="Please share your message *"
+            >Please share your message *</label
+          >
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <button
+          type="submit"
+          id="submitBtn"
+          class="submit-btn translatable"
+          data-id="Kirim Pesan"
+          data-en="Send Message"
+        >
+          Send Message
+        </button>
+
+        <div id="statusMessage"></div>
+      </form>
+    </section>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-layout">
+          <div class="footer-brand">
+            <h3 class="brand-text">WTU</h3>
+            <p
+              class="footer-tagline translatable"
+              data-en="An ongoing continuum of scientific thoughts and field methodologies."
+              data-id="Sebuah kontinum pemikiran ilmiah dan metodologi lapangan yang terus berjalan."
+            >
+              An ongoing continuum of scientific thoughts and field
+              methodologies.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <div class="link-column">
+              <h4 class="translatable" data-en="Explore" data-id="Eksplorasi">
+                Explore
+              </h4>
+              <ul>
+                <li>
+                  <a
+                    href="note.html"
+                    class="translatable"
+                    data-en="Notes"
+                    data-id="Catatan"
+                    >Notes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="library.html"
+                    class="translatable"
+                    data-en="Library"
+                    data-id="Perpustakaan"
+                    >Library</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="profile.html"
+                    class="translatable"
+                    data-en="Profile"
+                    data-id="Profil"
+                    >Profile</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="link-column">
+              <h4 class="translatable" data-en="Connect" data-id="Hubungi">
+                Connect
+              </h4>
+              <ul>
+                <li><a href="mailto:alvinwildansahli@gmail.com">Email</a></li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/alvinwildans"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/alvinwildans"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Instagram</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; 2026 Alvin Wildan Sahli. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
