@@ -157,38 +157,26 @@ img {
   margin: 0 5px;
   opacity: 0.5;
 }
-/* =========================================================
-   HERO SECTION & CURTAIN EFFECT
-========================================================= */
+
 /* =========================================================
    HERO SECTION & CURTAIN EFFECT
 ========================================================= */
 .hero-section {
   position: sticky;
-  /* Sesuaikan angka ini dengan perkiraan tinggi navbar Anda agar tidak menyelip ke belakang */
   top: 75px;
   z-index: 1;
-
   min-height: 65vh;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   text-align: center;
-
   padding-top: 4rem;
-
-  /* Background */
   background-image:
     linear-gradient(rgba(30, 18, 18, 0.45), rgba(30, 18, 18, 0.55)),
     url("images/library.png");
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  /* KUNCI UTAMA: Memaku gambar ke viewport (layar), bukan ke elemen */
   background-attachment: fixed;
 }
 
@@ -212,7 +200,6 @@ img {
   color: var(--bg-white);
 }
 
-/* Ensure the section below slides OVER the hero */
 .content-section {
   position: relative;
   z-index: 10;
@@ -223,7 +210,6 @@ img {
 /* =========================================================
    STAGGERED FADE-UP ANIMATION
 ========================================================= */
-/* Initial hidden state */
 .hero-section .hero-subtitle,
 .hero-section .hero-title span {
   opacity: 0;
@@ -232,14 +218,12 @@ img {
   display: inline-block;
 }
 
-/* Active state triggered by JavaScript */
 .hero-section.is-visible .hero-subtitle,
 .hero-section.is-visible .hero-title span {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Sequential delays */
 .hero-section.is-visible .hero-subtitle {
   transition-delay: 0.1s;
 }
@@ -467,25 +451,19 @@ img {
   position: absolute;
   bottom: 24px;
   left: 24px;
-
   width: 48px;
   height: 48px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 0;
   border: none;
   border-radius: 50%;
-
   background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(10px);
-
   color: #fff;
   cursor: pointer;
   z-index: 20;
-
   transition:
     transform 0.25s ease,
     background-color 0.25s ease;
@@ -509,31 +487,22 @@ img {
 
 .glass-text-card {
   position: absolute;
-
   top: 0;
   right: 1.5rem;
   bottom: -3.9rem;
-
   width: 25%;
-
   background: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 4px;
-
   padding: 3rem 3rem 0 3rem;
-
   display: flex;
   flex-direction: column;
-
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
-
   z-index: 2;
 }
 
-/* Tipografi di dalam kartu kaca */
 .video-tagline {
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -554,7 +523,6 @@ img {
   font-family: var(--font-serif, serif);
 }
 
-/* Styling Bilingual */
 .bilingual-desc {
   display: flex;
   flex-direction: column;
@@ -571,19 +539,18 @@ img {
 .lang-divider {
   border: none;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
-  width: 40px; /* Garis pembatas minimalis */
+  width: 40px;
   margin: 0;
 }
 
 .desc-en {
   font-size: 0.95rem;
-  color: #555; /* Warna agak lebih pudar untuk membedakan bahasa */
+  color: #555;
   line-height: 1.6;
   font-style: italic;
   margin: 0;
 }
 
-/* Style untuk Tombol Tonton Video */
 .video-link-btn {
   display: inline-block;
   margin-top: 18px;
@@ -602,7 +569,6 @@ img {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Efek Hover & Interaksi */
 .video-link-btn:hover {
   background: rgba(255, 255, 255, 0.25);
   border-color: rgba(255, 255, 255, 0.45);
@@ -616,9 +582,8 @@ img {
 
 /* 7. FOOTER */
 .site-footer {
-  position: relative; /* Menjadikan footer sejajar dengan content */
-  z-index: 10; /* Memastikan footer berada di DEPAN hero section */
-
+  position: relative;
+  z-index: 10;
   padding: 4rem 0 2rem;
   background-color: var(--bg-white);
   border-top: 4px double var(--border-color);
@@ -680,61 +645,16 @@ img {
   letter-spacing: 1px;
 }
 
-/* 8. RESPONSIVE RULES */
-@media screen and (max-width: 992px) {
-  .intro-layout,
-  .footer-layout {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  .footer-links {
-    justify-content: flex-start;
-  }
-  .video-container {
-    flex-direction: column;
-    justify-content: center;
-  }
-  .video-player {
-    width: 100%;
-  }
-  .video-glass-panel {
-    position: relative;
-    right: 0;
-    width: 90%;
-    margin-top: -3rem;
-    padding: 2rem;
-    bottom: auto;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .site-nav {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-  }
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .hero-title {
-    font-size: 2.2rem;
-  }
-  .drop-cap::first-letter {
-    font-size: 3.5rem;
-  }
-}
-
 /* Base Section */
 .ivy-header {
   background-color: var(--bg-paper);
-  min-height: 40vh; /* 40vh sudah pas agar tidak menutupi seluruh layar */
+  min-height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding: 3rem 2rem; /* Sedikit dirapatkan agar judul tidak terasa "mengambang" di ruang kosong */
+  padding: 3rem 2rem;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -746,19 +666,18 @@ img {
   z-index: 2;
 }
 
-/* Subtitle Styling */
 .subtitle-wrapper {
   overflow: hidden;
-  margin-bottom: 1.25rem; /* Jarak yang lebih pas ke judul utama */
+  margin-bottom: 1.25rem;
 }
 
 .subtitle-text {
   display: inline-block;
   font-family: var(--font-sans);
-  font-size: 0.85rem; /* PERBAIKAN: Dinaikkan menjadi 0.85rem agar terbaca nyaman */
+  font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.2em; /* Spasi huruf dirapatkan sedikit agar tidak terburai */
+  letter-spacing: 0.2em;
   color: var(--text-muted);
   transform: translateY(100%);
   opacity: 0;
@@ -767,23 +686,18 @@ img {
     opacity 0.8s ease;
 }
 
-/* Title Styling */
 .title-wrapper {
   overflow: hidden;
-  padding-bottom: 0.5rem; /* Ruang bernapas untuk descenders (seperti kaki huruf g, y, p) */
+  padding-bottom: 0.5rem;
 }
 
 .main-title {
   font-family: var(--font-serif);
-  font-size: clamp(
-    2.5rem,
-    6vw,
-    4.5rem
-  ); /* PERBAIKAN: Rentang ukuran diperbesar agar terasa dominan */
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 400;
   color: var(--text-main);
   margin: 0;
-  line-height: 1.15; /* Sedikit dilonggarkan agar font serif terlihat lebih indah */
+  line-height: 1.15;
   transform: translateY(100%);
   opacity: 0;
   transition:
@@ -791,16 +705,14 @@ img {
     opacity 1s ease 0.1s;
 }
 
-/* Garis Aksen Crimson */
 .crimson-line {
   height: 2px;
   background-color: var(--accent-crimson);
   width: 0;
-  margin: 1.5rem auto 0; /* Didekatkan ke judul agar terasa terkait */
+  margin: 1.5rem auto 0;
   transition: width 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
 }
 
-/* State ketika animasi aktif */
 .ivy-header.is-loaded .subtitle-text,
 .ivy-header.is-loaded .main-title {
   transform: translateY(0);
@@ -808,107 +720,79 @@ img {
 }
 
 .ivy-header.is-loaded .crimson-line {
-  width: 45px; /* Diperpendek sedikit agar berfungsi sebagai aksen pemanis, bukan pembatas */
+  width: 45px;
 }
 
 /* ==========================================================================
    CSS: EDITORIAL GRID & DYNAMIC PREVIEW (STANFORD / IVY LEAGUE STYLE)
    ========================================================================== */
-
-/* 1. MASONRY / EDITORIAL GRID ASIMETRIS */
 .editorial-container {
-  max-width: 1300px; /* Sedikit lebih lebar untuk layout majalah */
+  max-width: 1300px;
   margin: 0 auto;
 }
 
 .editorial-grid {
   display: grid;
-  grid-template-columns: repeat(
-    12,
-    1fr
-  ); /* 12 kolom untuk fleksibilitas asimetris */
+  grid-template-columns: repeat(12, 1fr);
   gap: 3rem 2rem;
   padding: 2rem 0 6rem 0;
   align-items: start;
 }
 
-/* Penempatan Posisi (The "Scattered" Look) */
-/* Penempatan Posisi (Telah dibalik urutannya: Artikel atas bernomor besar, artikel bawah bernomor kecil) */
-
-/* Penempatan Posisi (The "Scattered" Look) */
-/* Penempatan Posisi (Telah dibalik urutannya: Artikel atas bernomor besar, artikel bawah bernomor kecil) */
-
-/* =========================================================
-   PENEMPATAN POSISI ASIMETRIS (THE "SCATTERED" LOOK)
-   Logika: Artikel baru (angka besar) di atas, menyebar 
-   ke bawah, ruang kosong diisi oleh kutipan emas (quotes).
-========================================================= */
-
-/* ARTIKEL 5 (Paling Atas) - Dominasi Kiri */
 .article-5 {
   grid-column: 1 / 8;
   margin-top: 0;
 }
 
-/* QUOTE 4 (Insight Baru) - Mengisi ruang kosong di kanan Artikel 5 */
 .quote-4 {
   grid-column: 8 / 13;
   margin-top: 10rem;
 }
 
-/* ARTIKEL 4 (Refleksi GSDC) - Menjorok ke Kanan */
 .article-4 {
   grid-column: 5 / 13;
   margin-top: 4rem;
 }
 
-/* QUOTE 3 (Insight Baru) - Mengisi ruang kosong di kiri Artikel 4 */
 .quote-3 {
   grid-column: 1 / 4;
   margin-top: -6rem;
 }
 
-/* ARTIKEL 3 (Sumur Jalatunda) - Kembali ke Kiri */
 .article-3 {
   grid-column: 1 / 7;
   margin-top: 6rem;
 }
 
-/* QUOTE 2 (Eksisting: Pendidikan) - Mengisi ruang di kanan Artikel 3 */
 .quote-2 {
   grid-column: 8 / 13;
   margin-top: -4rem;
 }
 
-/* ARTIKEL 2 (Crossroad Pendidikan) - Posisi Tengah Melebar */
 .article-2 {
   grid-column: 7 / 13;
   margin-top: -30rem;
 }
 
-/* ARTIKEL 1 (Urban Heat - Paling Bawah) - Kembali dominasi Kiri */
 .article-1 {
   grid-column: 1 / 9;
   margin-top: 5rem;
 }
 
-/* QUOTE 1 (Eksisting: Parallax Divider Paling Bawah) */
 .quote-1 {
   grid-column: 1 / 13;
   margin: 8rem 0 4rem 0;
   text-align: center;
 }
 
-/* Gaya tambahan opsional agar kutipan interstitial terlihat lebih dinamis */
 .interstitial-quote h3 {
-  border-left: 3px solid #d4af37; /* Aksen emas */
+  border-left: 3px solid #d4af37;
   padding-left: 1.5rem;
   font-size: 1.4rem;
   line-height: 1.6;
   color: var(--text-color, #333);
 }
 
-/* 2. CARD STYLING & SHAPE MORPHING */
 .ed-card {
   background: var(--bg-paper);
   border: 1px solid var(--border-color);
@@ -916,7 +800,7 @@ img {
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: 2; /* Normal z-index */
+  z-index: 2;
   transition:
     transform 0.4s var(--ease),
     box-shadow 0.4s var(--ease);
@@ -926,12 +810,11 @@ img {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
 }
 
-/* Bentuk Awal: Setengah Lingkaran (Arch) */
 .shape-morph {
   width: 100%;
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  border-radius: 20rem 20rem 0 0; /* Arch */
+  border-radius: 20rem 20rem 0 0;
   border-bottom: 1px solid var(--border-color);
   transition:
     border-radius 1.5s cubic-bezier(0.25, 1, 0.5, 1),
@@ -939,7 +822,6 @@ img {
   position: relative;
 }
 
-/* Bentuk Setelah Beberapa Detik: Persegi Rounded */
 .shape-morph.morphed {
   border-radius: 8px 8px 0 0;
 }
@@ -948,7 +830,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(30%) sepia(10%); /* Filter ala koran kuno */
+  filter: grayscale(30%) sepia(10%);
   transition:
     filter 0.8s ease,
     transform 1.5s ease;
@@ -988,7 +870,6 @@ img {
   margin-bottom: 1.5rem;
 }
 
-/* Pemisah Teks Preview & Full Text */
 .ed-excerpt {
   font-family: var(--font-serif);
   font-size: 1.15rem;
@@ -998,10 +879,9 @@ img {
 }
 
 .ed-full-text {
-  display: none; /* Sembunyikan full text di mode Grid */
+  display: none;
 }
 
-/* Tombol Aksi */
 .ed-actions {
   margin-top: 2rem;
   padding-top: 1.5rem;
@@ -1030,14 +910,12 @@ img {
 }
 
 .reading-nav {
-  display: none; /* Sembunyikan navigasi atas di grid mode */
+  display: none;
 }
 
 /* ==========================================================================
-   3. CENTERED READING MODE (Klik Buka Full Artikel)
+   3. CENTERED READING MODE
    ========================================================================== */
-
-/* Overlay Background */
 .reading-overlay {
   position: fixed;
   inset: 0;
@@ -1055,10 +933,9 @@ img {
 }
 
 body.reading-mode-active {
-  overflow: hidden; /* Matikan scroll body */
+  overflow: hidden;
 }
 
-/* Styling Artikel Saat Terbuka */
 .ed-card.is-reading {
   position: fixed;
   top: 3%;
@@ -1072,30 +949,29 @@ body.reading-mode-active {
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
   overflow-y: auto;
   overflow-x: hidden;
-  margin-top: 0; /* Reset margin grid */
+  margin-top: 0;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .ed-card.is-reading .shape-morph {
-  border-radius: 12px 12px 0 0; /* Reset border atas agar kotak */
+  border-radius: 12px 12px 0 0;
   aspect-ratio: auto;
-  height: 400px; /* Tinggi gambar saat membaca */
+  height: 400px;
 }
 
 .ed-card.is-reading .ed-excerpt {
-  display: none; /* Sembunyikan excerpt pendek */
+  display: none;
 }
 
 .ed-card.is-reading .ed-full-text {
-  display: block; /* Munculkan teks full */
+  display: block;
   margin-top: 1rem;
 }
 
 .ed-card.is-reading .ed-actions {
-  display: none; /* Sembunyikan tombol "read more" */
+  display: none;
 }
 
-/* Tampilkan Navigasi Tutup/Share (Sticky Top) saat membaca */
 .ed-card.is-reading .reading-nav {
   display: flex;
   justify-content: space-between;
@@ -1106,7 +982,7 @@ body.reading-mode-active {
   padding: 1rem 3rem;
   border-bottom: 1px solid var(--border-color);
   z-index: 1002;
-  margin: -2.5rem -3rem 2rem -3rem; /* Memenuhi box padding */
+  margin: -2.5rem -3rem 2rem -3rem;
 }
 
 .close-reading-btn,
@@ -1132,7 +1008,6 @@ body.reading-mode-active {
   color: var(--accent-gold);
 }
 
-/* Typography di Reading Mode (Lebih Rapih) */
 .ed-card.is-reading .academic-text p {
   font-size: 1.15rem;
   line-height: 1.8;
@@ -1141,7 +1016,7 @@ body.reading-mode-active {
 }
 
 /* ==========================================================================
-   4. INTERSTITIAL BLOCKS (Kutipan & Ornamen)
+   4. INTERSTITIAL BLOCKS
    ========================================================================== */
 .interstitial-quote {
   background: var(--accent-crimson);
@@ -1175,34 +1050,30 @@ body.reading-mode-active {
 /* ==========================================================================
    5. PARALLAX & CURTAIN REVEAL ANIMATIONS
    ========================================================================== */
-
-/* Tirai Pembuka (Curtain Reveal) */
 .curtain-reveal {
   position: relative;
-  overflow: hidden; /* Sembunyikan konten yang belum direveal */
+  overflow: hidden;
 }
 
 .curtain-reveal::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: var(--bg-paper); /* Warna kertas menutupi elemen */
+  background-color: var(--bg-paper);
   transform-origin: bottom;
   transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
   z-index: 10;
 }
 
-/* Saat elemen masuk viewport, tirai naik ke atas (scaleY 0) */
 .curtain-reveal.is-visible::after {
   transform: scaleY(0);
   transform-origin: top;
 }
 
-/* Parallax Divider Image */
 .parallax-divider {
   height: 500px;
-  background-image: url("https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop"); /* Gambar arsitektural akademik */
-  background-attachment: fixed; /* Kunci efek Parallax */
+  background-image: url("https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop");
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   border-radius: 12px;
@@ -1211,28 +1082,25 @@ body.reading-mode-active {
 /* ==========================================================================
    INTERIOR ARTIKEL (FULL TEXT TYPOGRAPHY & LAYOUT)
    ========================================================================== */
-
-/* 1. Reset Paragraf Utama (Justify & Lebar Nyaman) */
 .ed-card.is-reading .ed-full-text {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Memusatkan seluruh konten */
+  align-items: center;
   padding-bottom: 4rem;
 }
 
 .ed-card.is-reading .ed-full-text p {
   text-align: justify;
-  hyphens: auto; /* Mencegah bolong-bolong pada justify */
+  hyphens: auto;
   -webkit-hyphens: auto;
-  max-width: 720px; /* Batas lebar baca ideal */
+  max-width: 720px;
   width: 100%;
   font-size: 1.15rem;
   line-height: 1.8;
   margin-bottom: 1.8rem;
-  color: #2c2c2c; /* Sedikit lebih pekat agar kontras */
+  color: #2c2c2c;
 }
 
-/* 2. Heading di dalam Artikel */
 .ed-card.is-reading .ed-full-text h3 {
   max-width: 720px;
   width: 100%;
@@ -1245,9 +1113,8 @@ body.reading-mode-active {
   padding-bottom: 0.5rem;
 }
 
-/* 3. Pull Quotes (Kutipan Tarik) di dalam artikel */
 .ed-pull-quote {
-  max-width: 850px; /* Sedikit lebih lebar dari teks untuk efek "Breakout" */
+  max-width: 850px;
   width: 100%;
   margin: 3.5rem 0;
   padding: 2.5rem 0;
@@ -1261,14 +1128,13 @@ body.reading-mode-active {
   font-size: 1.6rem !important;
   font-style: italic;
   color: var(--accent-crimson) !important;
-  text-align: center !important; /* Timpa justify */
+  text-align: center !important;
   line-height: 1.5 !important;
   margin: 0 !important;
 }
 
-/* 4. Inline Images & Data Charts (Gambar di dalam teks) */
 .ed-inline-figure {
-  max-width: 900px; /* Lebih lebar dari paragraf (Bleed effect) */
+  max-width: 900px;
   width: 100%;
   margin: 3rem 0;
   background: var(--bg-white);
@@ -1294,7 +1160,6 @@ body.reading-mode-active {
   line-height: 1.6;
 }
 
-/* Tempat untuk Plotly/Chart.js di dalam artikel */
 .ed-chart-container {
   width: 100%;
   height: 400px;
@@ -1304,7 +1169,6 @@ body.reading-mode-active {
   border-radius: 4px;
 }
 
-/* 5. Highlight Teks (Kuning Klasik) */
 .ed-highlight {
   background-image: linear-gradient(
     to top,
@@ -1314,64 +1178,10 @@ body.reading-mode-active {
   padding: 0 0.1em;
   font-weight: 500;
 }
-/* ==========================================================================
-   6. RESPONSIVE / MOBILE ADAPTATION
-   ========================================================================== */
-@media screen and (max-width: 992px) {
-  .editorial-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-  }
-
-  .article-1,
-  .article-2,
-  .article-3,
-  .article-4,
-  .quote-1,
-  .quote-2 {
-    margin-top: 0; /* Reset margin negatif */
-    grid-column: 1 / -1;
-  }
-
-  .ed-body {
-    padding: 2rem;
-  }
-  .interstitial-quote {
-    padding: 4rem 2rem;
-  }
-  .interstitial-quote h3 {
-    font-size: 1.8rem;
-  }
-  .parallax-divider {
-    height: 300px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .ed-card.is-reading {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transform: none;
-    border-radius: 0;
-  }
-  .ed-card.is-reading .shape-morph {
-    border-radius: 0;
-    height: 250px;
-  }
-  .ed-card.is-reading .reading-nav {
-    margin: -2rem -2rem 2rem -2rem;
-    padding: 1rem;
-  }
-}
 
 /* ==========================================================================
    CSS KHUSUS: DIGITAL LIBRARY
    ========================================================================== */
-
-/* Kontrol Pencarian dan Filter */
 .library-controls {
   display: flex;
   justify-content: space-between;
@@ -1382,7 +1192,6 @@ body.reading-mode-active {
   border-bottom: 1px solid var(--border-color);
 }
 
-/* Grid Buku */
 .library-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -1390,14 +1199,12 @@ body.reading-mode-active {
   margin-bottom: 6rem;
 }
 
-/* Kartu Buku */
 .book-card {
   display: flex;
   flex-direction: column;
   text-decoration: none;
 }
 
-/* Sampul Buku dengan Efek 3D / Bayangan Lipatan Kertas */
 .book-cover {
   position: relative;
   width: 100%;
@@ -1409,7 +1216,6 @@ body.reading-mode-active {
   overflow: hidden;
 }
 
-/* Garis gradasi untuk menciptakan ilusi "punggung buku" / binding */
 .book-cover::after {
   content: "";
   position: absolute;
@@ -1433,7 +1239,6 @@ body.reading-mode-active {
   transition: filter 0.4s ease;
 }
 
-/* Overlay Gelap Saat Hover */
 .book-overlay {
   position: absolute;
   inset: 0;
@@ -1457,7 +1262,6 @@ body.reading-mode-active {
   border-radius: 4px;
 }
 
-/* Efek Hover Kartu Buku */
 .book-card:hover .book-cover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 4px 12px 24px rgba(0, 0, 0, 0.15);
@@ -1467,7 +1271,6 @@ body.reading-mode-active {
   opacity: 1;
 }
 
-/* Informasi Metadata Buku (Bawah Sampul) */
 .book-info {
   margin-top: 1rem;
   text-align: center;
@@ -1500,7 +1303,6 @@ body.reading-mode-active {
   margin: 0;
 }
 
-/* Fallback Kotak Kosong */
 .no-results-box {
   text-align: center;
   padding: 4rem 2rem;
@@ -1513,7 +1315,6 @@ body.reading-mode-active {
   background: transparent;
 }
 
-/* Section Titles (Library) */
 .page-title-banner {
   text-align: center;
   max-width: 800px;
@@ -1565,8 +1366,8 @@ body.reading-mode-active {
   background: transparent;
   border: none !important;
   border-bottom: 1px solid var(--border-color) !important;
-  padding: 8px 0 8px 28px !important; /* Jarak untuk ikon */
-  font-family: var(--font-serif); /* Menggunakan serif agar lebih elegan */
+  padding: 8px 0 8px 28px !important;
+  font-family: var(--font-serif);
   font-size: 1.05rem;
   color: var(--text-main);
   outline: none;
@@ -1584,7 +1385,6 @@ body.reading-mode-active {
   font-style: italic;
 }
 
-/* Deskripsi Khusus Header Library */
 .header-desc {
   font-family: var(--font-serif);
   font-size: 1.15rem;
@@ -1593,8 +1393,6 @@ body.reading-mode-active {
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.6;
-
-  /* Posisi awal untuk animasi Load */
   transform: translateY(100%);
   opacity: 0;
   transition:
@@ -1602,21 +1400,14 @@ body.reading-mode-active {
     opacity 1s ease 0.4s;
 }
 
-/* State ketika animasi aktif (Trigger dari JS) */
 .ivy-header.is-loaded .header-desc {
   transform: translateY(0);
   opacity: 1;
 }
 
-body {
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
-    sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-main);
-  line-height: 1.6;
-}
-
+/* ==========================================================================
+   PROFILE & CONTACT FORM SECTION
+   ========================================================================== */
 .main-layout {
   display: flex;
   gap: 6rem;
@@ -1635,18 +1426,12 @@ body {
 .profile-photo {
   width: 240px;
   background: #ffffff;
-
-  /* Bingkai polaroid */
   padding: 5px 5px 45px 5px;
-
   border: 1px solid #e5e5e5;
-
   box-shadow:
     0 12px 30px rgba(0, 0, 0, 0.08),
     0 2px 8px rgba(0, 0, 0, 0.04);
-
   margin: 0 auto 2.5rem;
-
   transform: rotate(-1deg);
   transition: all 0.3s ease;
 }
@@ -1681,19 +1466,6 @@ body {
 }
 
 .contact-section {
-  margin-top: 2.5rem;
-  padding-top: 2rem;
-  border-top: 1px solid #e5e5e5;
-}
-
-.contact-section h3 {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: #777;
-  margin-bottom: 1.2rem;
-}
-.contact-section {
   margin-top: 3rem;
   padding-top: 2rem;
   border-top: 1px solid #e8e8e8;
@@ -1717,15 +1489,12 @@ body {
 .contact-icon {
   width: 42px;
   height: 42px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 50%;
   background: #f7f7f7;
   border: 1px solid #ececec;
-
   flex-shrink: 0;
 }
 
@@ -1771,7 +1540,7 @@ body {
 
 .form-header {
   margin-bottom: 2rem;
-  border-bottom: 2px solid var(--crimson-accent);
+  border-bottom: 2px solid var(--accent-crimson);
   padding-bottom: 1rem;
 }
 
@@ -1837,7 +1606,6 @@ textarea {
   min-height: 120px;
 }
 
-/* Rating Radio Buttons Styling */
 .rating-group {
   display: flex;
   gap: 1rem;
@@ -1857,37 +1625,32 @@ textarea {
   background-color: var(--accent-crimson);
   color: #ffffff;
   border: 1px solid var(--text-main);
-  border-radius: 4px; /* Memberikan sudut yang sedikit lebih lembut */
-  padding: 1rem 2rem; /* Sedikit lebih tinggi untuk kenyamanan klik/sentuh */
-  font-size: 0.85rem; /* Dikecilkan sedikit agar terlihat lebih rapi */
-  font-weight: 600; /* Ditebalkan untuk visibilitas */
+  border-radius: 4px;
+  padding: 1rem 2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.15em; /* Jarak antar huruf diperlebar untuk kesan elegan */
+  letter-spacing: 0.15em;
   cursor: pointer;
   width: 100%;
-
-  /* Transisi menggunakan cubic-bezier agar pergerakan terasa lebih natural (tidak kaku) */
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* Efek saat kursor berada di atas tombol */
 .submit-btn:hover:not(:disabled) {
-  background-color: var(--crimson-accent);
-  border-color: var(--crimson-accent);
-  color: #656565;
-  transform: translateY(-2px); /* Tombol seolah terangkat ke atas */
-  box-shadow: 0 8px 15px rgba(220, 20, 60, 0.2); /* Bayangan berwarna crimson yang lembut */
+  background-color: var(--accent-crimson);
+  border-color: var(--accent-crimson);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(139, 0, 0, 0.2);
 }
 
-/* Efek saat tombol sedang ditekan (klik) */
 .submit-btn:active:not(:disabled) {
-  transform: translateY(0); /* Tombol kembali turun saat ditekan */
-  box-shadow: 0 2px 5px rgba(220, 20, 60, 0.1);
-  transition: all 0.1s ease; /* Transisi dipercepat saat ditekan agar responsif */
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(139, 0, 0, 0.1);
+  transition: all 0.1s ease;
 }
 
-/* Tampilan saat tombol tidak bisa diklik (misal: saat sedang memproses pengiriman) */
 .submit-btn:disabled {
   background-color: #f5f5f5;
   color: #a0a0a0;
@@ -1896,7 +1659,7 @@ textarea {
   box-shadow: none;
   transform: none;
 }
-/* Feedback Message */
+
 #statusMessage {
   margin-top: 1rem;
   padding: 1rem;
@@ -1914,4 +1677,170 @@ textarea {
   background: #ffebee;
   color: #c62828;
   border: 1px solid #ffcdd2;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE / MOBILE ADAPTATION (UPDATED)
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+  /* 1. HEADER (Bilah Navigasi) */
+  .site-nav {
+    padding: 0.5rem 1rem; /* Jauh lebih rapat di layar HP */
+    gap: 0.5rem;
+  }
+
+  /* 2. HERO SECTION */
+  .hero-section {
+    min-height: 35vh; /* Sangat dipendekkan agar tidak memenuhi layar HP */
+    padding-top: 1.5rem;
+  }
+
+  /* Jika menggunakan hero gaya Ivy */
+  .ivy-header {
+    min-height: 25vh; /* Dibuat lebih pipih */
+    padding: 1.5rem 1rem;
+  }
+
+  /* 3. FOOTER */
+  .site-footer {
+    padding: 2rem 0 1rem; /* Ruang atas dan bawah dikurangi drastis */
+  }
+
+  .footer-layout {
+    gap: 1.5rem; /* Jarak antar tumpukan menu footer lebih rapat */
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-bottom {
+    padding-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .intro-layout,
+  .footer-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .footer-links {
+    justify-content: flex-start;
+  }
+  .video-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .video-player {
+    width: 100%;
+  }
+  .video-glass-panel {
+    position: relative;
+    right: 0;
+    width: 90%;
+    margin-top: -3rem;
+    padding: 2rem;
+    bottom: auto;
+  }
+  .editorial-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .article-1,
+  .article-2,
+  .article-3,
+  .article-4,
+  .quote-1,
+  .quote-2 {
+    margin-top: 0;
+    grid-column: 1 / -1;
+  }
+  .ed-body {
+    padding: 2rem;
+  }
+  .interstitial-quote {
+    padding: 4rem 2rem;
+  }
+  .interstitial-quote h3 {
+    font-size: 1.8rem;
+  }
+  .parallax-divider {
+    height: 300px;
+  }
+
+  /* Penyesuaian Halaman Profil & Kontak */
+  .main-layout {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 0 2rem;
+    margin: 3rem auto;
+  }
+  .profile-container {
+    flex: 1 1 100%;
+    position: relative; /* Menghapus sticky di mode mobile */
+    top: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .site-nav {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .drop-cap::first-letter {
+    font-size: 3.5rem;
+  }
+  .ed-card.is-reading {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: none;
+    border-radius: 0;
+  }
+  .ed-card.is-reading .shape-morph {
+    border-radius: 0;
+    height: 250px;
+  }
+  .ed-card.is-reading .reading-nav {
+    margin: -2rem -2rem 2rem -2rem;
+    padding: 1rem;
+  }
+
+  /* Penyesuaian Khusus Mobile */
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .main-layout {
+    padding: 0 1.5rem;
+  }
+  .profile-photo {
+    width: 100%;
+    max-width: 280px;
+  }
+  .glass-text-card {
+    width: 90%;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    margin: 3rem auto 0 auto; /* Menarik panel agar tumpang tindih dengan video di HP */
+    padding: 2rem;
+  }
+  .video-showcase {
+    height: auto;
+    padding-bottom: 3rem;
+  }
+  .video-wrapper {
+    height: auto;
+  }
 }
