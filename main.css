@@ -241,7 +241,7 @@ img {
 /* 4. CONTENT SECTIONS (Intro & Grids) */
 .content-section {
   padding: 6rem 0;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: none !important;
 }
 
 .content-section.bg-alt {
@@ -339,6 +339,13 @@ img {
     white 100%
   );
   pointer-events: none;
+}
+ 
+.glass-text p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  hyphens: auto;
+  font-size: 2rem;
 }
 
 /* 5. ARCHIVE CARDS (Featured Notes & Journeys) */
@@ -611,16 +618,41 @@ img {
 }
 
 /* --- AREA TEKS (Berada di Bawah Video) --- */
+.image-container {
+    position: relative;
+}
+
 .glass-text-card {
-  width: 100%;
-  max-width: 900px; /* Membatasi lebar teks agar tetap nyaman dibaca mata */
-  margin: 0 auto; /* Memastikan blok teks berada di tengah layar */
-  padding: 4rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Membuat isi teks rata tengah */
-  text-align: center;
-  background: #ffffff;
+    position: absolute;
+    top: 10%;
+    bottom: -5%;
+    left: 30%;
+    transform: translateX(-50%);
+    
+    width: min(80%, 600px);
+    padding: 24px 32px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+
+    box-sizing: border-box;
+}
+
+.glass-text-card p {
+    margin: 0;
+}
+
+.glass-text p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  hyphens: auto;
+  font-size: 1.3rem;
+  padding: 10rem 0;
+  color:var(--bg-white);
 }
 /* 7. FOOTER */
 .site-footer {
@@ -1950,5 +1982,57 @@ textarea {
 
   .footer-bottom {
     padding-top: 1rem;
+  }
+}
+
+/* Container khusus untuk layout teks di tengah (Full Center) */
+.text-center-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+}
+
+/* Memastikan elemen di dalam intro-text juga terkunci di tengah */
+.text-center-layout .intro-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+/* Gaya untuk Judul */
+.text-center-layout .section-title {
+  font-family: Georgia, serif; /* Memaksa penggunaan font Georgia */
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-crimson, #8b0000); /* Warna merah crimson */
+  margin-bottom: 12px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Gaya untuk Keterangan */
+.text-center-layout .section-subtitle {
+  font-family: Georgia, serif; /* Memaksa penggunaan font Georgia */
+  font-size: 1.125rem;
+  color: #000000; /* Warna teks keterangan hitam solid */
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Penyesuaian responsif untuk layar handphone */
+@media (max-width: 768px) {
+  .text-center-layout .section-title { 
+    font-size: 2rem; 
+  }
+  .text-center-layout .section-subtitle { 
+    font-size: 1rem; 
+    padding: 0 15px; 
   }
 }
