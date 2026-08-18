@@ -206,7 +206,7 @@ img {
   z-index: 10;
   background-color: var(--bg-paper);
   box-shadow: 0 -15px 40px rgba(212, 208, 208, 0.05);
-}
+} 
 
 /* =========================================================
    STAGGERED FADE-UP ANIMATION
@@ -244,9 +244,6 @@ img {
   border-bottom: none !important;
 }
 
-.content-section.bg-alt {
-  background-color: var(--bg-alt);
-}
 
 .section-header {
   display: flex;
@@ -587,34 +584,30 @@ img {
 .video-link-btn:active {
   transform: translateY(1px);
 }
-/* --- TATA LETAK UTAMA (Full Width & Bertumpuk) --- */
 .video-container {
-  display: flex;
-  flex-direction: column;
-  background: #ffffff;
-  border-radius: 0; /* Sudut sepenuhnya tajam (Round 0) */
-  overflow: hidden;
-  max-width: 100%; /* Membentang penuh / full layar */
-  width: 100%;
-  margin: 0;
-  box-shadow: none; /* Menghilangkan bayangan agar menyatu dengan latar */
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    overflow: hidden;
 }
 
-/* --- AREA VIDEO (100% Lebar Layar) --- */
 .youtube-wrapper {
-  width: 100%;
-  position: relative;
-  aspect-ratio: 16 / 9; /* Mengunci rasio standar YouTube */
-  background-color: #000;
+    width: 100%;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: #000;
 }
 
 .youtube-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /* --- AREA TEKS (Berada di Bawah Video) --- */
@@ -622,26 +615,25 @@ img {
 
 .image-page {
     position: relative;
-    overflow: hidden;
-}
-
-.image-page::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 50%;
+    width: 100%;
+    overflow: visible;
     background: #8B0000;
-    z-index: 0;
 }
 
 .image-container {
     position: relative;
-    z-index: 1;
-    padding: 15px;
-    border-radius: 20px;
-    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+}
+
+.full-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    object-fit: contain;
 }
 
 .glass-text-card {

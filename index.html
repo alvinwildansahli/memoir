@@ -12,8 +12,81 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./main.css" />
+
+    <!-- Variabel CSS dan Utilitas Warna Latar & Layout -->
+    <style>
+      :root {
+        --bg-paper: #ffffff;
+        --bg-white: #ffffff;
+        --bg-alt: #f9f9f9;
+        --text-main: #222222;
+        --text-muted: #555555;
+        --accent-crimson: #8b0000;
+        --accent-gold: #d4af37;
+        --border-color: #dcdcdc;
+        --border-dark: #1a1a1a;
+        --font-serif: "Crimson Text", Georgia, serif;
+        --font-sans: "Inter", -apple-system, sans-serif;
+      }
+
+      .bg-paper { background-color: var(--bg-paper); }
+      .bg-white { background-color: var(--bg-white); }
+      .bg-alt { background-color: var(--bg-alt); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+
+      /* Styling Khusus Judul Tengah */
+      .text-center-layout {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        width: 100%;
+        margin-bottom: 24px;
+      }
+      .text-center-layout .intro-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+      }
+      .text-center-layout .section-title {
+        font-family: var(--font-serif);
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--accent-crimson);
+        margin-bottom: 12px;
+        line-height: 1.2;
+        text-align: center;
+      }
+      .text-center-layout .section-subtitle {
+        font-family: var(--font-serif);
+        font-size: 1.125rem;
+        color: var(--text-main);
+        line-height: 1.5;
+        margin: 0 auto;
+        max-width: 600px;
+        text-align: center;
+      }
+      
+      /* Typography untuk Narasi */
+      .narrative-text {
+        max-width: 800px; 
+        margin: 0 auto 40px; 
+        color: var(--text-muted); 
+        line-height: 1.8;
+        font-family: var(--font-sans);
+        font-size: 1rem;
+      }
+      
+      @media (max-width: 768px) {
+        .text-center-layout .section-title { font-size: 2rem; }
+        .text-center-layout .section-subtitle { font-size: 1rem; padding: 0 15px; }
+        .narrative-text { padding: 0 15px; }
+      }
+    </style>
   </head>
-  <body>
+  <body class="bg-paper">
     <header class="site-header">
       <nav class="site-nav">
         <div class="nav-logo">
@@ -70,7 +143,7 @@
       </nav>
     </header>
 
-    <section class="hero-section">
+    <section class="hero-section bg-white">
       <div class="container hero-content">
         <p
           class="hero-subtitle translatable"
@@ -99,7 +172,7 @@
       </div>
     </section>
 
-    <section class="content-section">
+    <section class="content-section bg-white">
       <div class="container intro-layout">
         <div class="intro-text">
           <h2
@@ -139,28 +212,21 @@
       </div>
     </section>
 
-<!-- SECTION 1: Community Activities -->
-<section class="content-section bg-alt">
+<!-- SECTION 1: Community Activities (SUIJI & PPKO) -->
+<section class="content-section bg-alt" style="padding-top: 60px;">
   <div class="container">
-    <div class="section-header">
-      <h2
-        class="translatable"
-        data-en="Community Activities and Service Learning Program"
-        data-id="Program Kegiatan Komunitas dan Pembelajaran Layanan"
-      >
-        Community Activities and Service Learning Program
-      </h2>
-
-      <a href="note.html" class="view-all-link">
-        <span
-          class="translatable"
-          data-en="Explore Activities"
-          data-id="Jelajahi Kegiatan"
-        >
-          Explore Activities
-        </span>
-        &rarr;
-      </a>
+    
+    <!-- Judul Tengah -->
+    <div class="text-center-layout">
+      <div class="intro-text">
+        <h2 class="section-title translatable" data-en="Community Initiatives & Service-Learning" data-id="Inisiatif Komunitas & Service-Learning">
+          Community Initiatives & Service-Learning
+        </h2>
+        <p class="section-subtitle translatable" data-en="Reflections and collaborative actions alongside grassroots communities." data-id="Refleksi dan aksi kolaboratif bersama masyarakat di tingkat akar rumput.">
+          Reflections and collaborative actions alongside grassroots communities.
+        </p>
+      </div>
+    </div>
     </div>
 
     <!-- Gambar -->
@@ -175,7 +241,7 @@
     </section>
 
     <!-- Video -->
-    <div class="video-container">
+    <div class="video-container" style="margin-top: 32px;">
       <div class="youtube-wrapper">
         <iframe
           src="https://www.youtube.com/embed/va9fvW3wSvw?rel=0&modestbranding=1"
@@ -190,7 +256,7 @@
 
 
 <!-- SECTION 2: Featured Notes -->
-<section class="content-section bg-paper">
+<section class="content-section bg-white">
   <div class="container">
     <div class="section-header">
       <h2
@@ -393,7 +459,7 @@
 
 
 <!-- FOOTER -->
-<footer class="site-footer">
+<footer class="site-footer bg-paper">
   <div class="container">
 
     <div class="footer-layout">
@@ -510,3 +576,5 @@
 </footer>
 
 <script src="./main.js"></script>
+</body>
+</html>
