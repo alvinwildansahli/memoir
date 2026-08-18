@@ -85,26 +85,30 @@ img {
 
 /* 2. HEADER & NAVIGATION */
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.95),
-    rgba(255, 255, 255, 0.8)
-  );
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.03);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    background: transparent;
+    backdrop-filter: blur(0.5px);
+    -webkit-backdrop-filter: blur(0.5px);
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: none;
+
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 .site-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.8rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.8rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .brand-text {
@@ -162,20 +166,17 @@ img {
    HERO SECTION & CURTAIN EFFECT
 ========================================================= */
 .hero-section {
-  position: sticky;
-  top: 75px;
-  z-index: 1;
   min-height: 65vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 4rem;
+  padding-top: 0rem;
   background-image:
     linear-gradient(rgba(30, 18, 18, 0.45), rgba(30, 18, 18, 0.55)),
-    url("images/library.png");
+    url("images/main.JPG");
   background-size: cover;
-  background-position: center;
+  background-position: center 80%;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -579,7 +580,48 @@ img {
 .video-link-btn:active {
   transform: translateY(1px);
 }
+/* --- TATA LETAK UTAMA (Full Width & Bertumpuk) --- */
+.video-container {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 0; /* Sudut sepenuhnya tajam (Round 0) */
+  overflow: hidden;
+  max-width: 100%; /* Membentang penuh / full layar */
+  width: 100%;
+  margin: 0;
+  box-shadow: none; /* Menghilangkan bayangan agar menyatu dengan latar */
+}
 
+/* --- AREA VIDEO (100% Lebar Layar) --- */
+.youtube-wrapper {
+  width: 100%;
+  position: relative;
+  aspect-ratio: 16 / 9; /* Mengunci rasio standar YouTube */
+  background-color: #000;
+}
+
+.youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* --- AREA TEKS (Berada di Bawah Video) --- */
+.glass-text-card {
+  width: 100%;
+  max-width: 900px; /* Membatasi lebar teks agar tetap nyaman dibaca mata */
+  margin: 0 auto; /* Memastikan blok teks berada di tengah layar */
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Membuat isi teks rata tengah */
+  text-align: center;
+  background: #ffffff;
+}
 /* 7. FOOTER */
 .site-footer {
   position: relative;

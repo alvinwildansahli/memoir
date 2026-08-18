@@ -160,6 +160,29 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+  document.addEventListener('DOMContentLoaded', () => {
+  const video = document.getElementById('cardVideo');
+  const soundBtn = document.getElementById('soundToggleCard');
+  const iconMuted = document.getElementById('icon-muted');
+  const iconUnmuted = document.getElementById('icon-unmuted');
+
+  // Pastikan elemen ada sebelum menjalankan logika
+  if (video && soundBtn) {
+    soundBtn.addEventListener('click', () => {
+      // Toggle status mute pada video
+      video.muted = !video.muted;
+      
+      // Update antarmuka ikon
+      if (video.muted) {
+        iconMuted.style.display = 'block';
+        iconUnmuted.style.display = 'none';
+      } else {
+        iconMuted.style.display = 'none';
+        iconUnmuted.style.display = 'block';
+      }
+    });
+  }
+});
 
   /* ------------------------------------------------------------------------
      3. HERO VISIBILITY
