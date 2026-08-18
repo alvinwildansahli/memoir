@@ -617,15 +617,32 @@ img {
     position: relative;
     width: 100%;
     overflow: visible;
+    background: transparent;
+}
+
+.image-page::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50%;
     background: #8B0000;
+    z-index: 0;
+}
+
+.image-container {
+    position: relative;
+    z-index: 1;
 }
 
 .image-container {
     position: relative;
     width: 100%;
-    padding: 0;
+    padding: 12px 12px;
     margin: 0;
     overflow: visible;
+    border-radius: 90px;
 }
 
 .full-image {
