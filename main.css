@@ -240,7 +240,7 @@ img {
 
 /* 4. CONTENT SECTIONS (Intro & Grids) */
 .content-section {
-  padding: 6rem 0;
+  padding: 3rem 0;
   border-bottom: none !important;
 }
 
@@ -618,8 +618,30 @@ img {
 }
 
 /* --- AREA TEKS (Berada di Bawah Video) --- */
+
+
+.image-page {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-page::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+    background: #8B0000;
+    z-index: 0;
+}
+
 .image-container {
     position: relative;
+    z-index: 1;
+    padding: 15px;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .glass-text-card {
