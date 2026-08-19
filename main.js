@@ -35,7 +35,7 @@ function switchLanguage(lang) {
     const translatedText = element.getAttribute(`data-${lang}`);
 
     if (translatedText !== null) {
-      element.textContent = translatedText;
+      element.innerHTML = translatedText;
     }
   });
 
@@ -60,6 +60,141 @@ function switchLanguage(lang) {
 // Supaya bisa dipanggil dari HTML
 window.switchLanguage = switchLanguage;
 
+
+  /* ------------------------------------------------------------------------
+     HEADER GLASSMORPHISM SCROLL EFFECT
+     ------------------------------------------------------------------------ */
+  const header = document.querySelector(".site-header");
+
+  if (header) {
+    window.addEventListener("scroll", () => {
+      // Jika scroll lebih dari 50px ke bawah, nyalakan efek kaca
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        // Jika kembali mentok ke atas, kembalikan jadi transparan
+        header.classList.remove("scrolled");
+      }
+    }, { passive: true }); // passive: true membantu performa scroll
+  }
+
+  /* ------------------------------------------------------------------------
+     1. INDEX AFTERMOVIE CYCLICAL CAROUSEL (SMOOTH KIRI-KANAN) & ARROWS
+     ------------------------------------------------------------------------ */
+
+
+  const track = document.getElementById('am-carousel');
+  const dotsContainer = document.getElementById('am-dots');
+  const prevBtn = document.getElementById('am-prev');
+  const nextBtn = document.getElementById('am-next');
+
+  if (track && dotsContainer) {
+    const originalItems = Array.from(track.querySelectorAll('.aftermovie-item'));
+    const totalOriginal = originalItems.length;
+
+    // 1. Generate Dots secara dinamis
+    originalItems.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.classList.add('carousel-dot');
+      if (index === 0) dot.classList.add('active');
+      dotsContainer.appendChild(dot);
+    });
+    const dots = Array.from(dotsContainer.querySelectorAll('.carousel-dot'));
+
+    // 2. Clone elemen untuk ilusi Infinite KIRI dan KANAN
+    // Clone untuk ditaruh di awal (supaya bisa scroll ke kiri)
+    originalItems.forEach(item => {
+      const clone = item.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      track.insertBefore(clone, originalItems[0]);
+    });
+
+    // Clone untuk ditaruh di akhir (supaya bisa scroll ke kanan)
+    originalItems.forEach(item => {
+      const clone = item.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      track.appendChild(clone);
+    });
+
+    // 3. Fungsi menghitung ukuran untuk scroll (Lebar Item + Jarak Gap)
+    const getScrollStep = () => {
+      const itemWidth = originalItems[0].offsetWidth;
+      const gap = parseFloat(getComputedStyle(track).gap) || 24;
+      return itemWidth + gap;
+    };
+
+    // 4. Set posisi awal ke kelompok video ASLI (di tengah-tengah)
+    setTimeout(() => {
+      const step = getScrollStep();
+      // Scroll secara instan ke kelompok video original
+      track.style.scrollBehavior = 'auto';
+      track.scrollLeft = totalOriginal * step;
+    }, 100);
+
+    let scrollTimeout;
+
+    // 5. Logic saat menggeser (Swipe)
+    track.addEventListener('scroll', () => {
+      const step = getScrollStep();
+      if (!step) return;
+
+      const scrollLeft = track.scrollLeft;
+      
+      // Menghitung indeks mutlak berdasarkan posisi scroll saat ini
+      const absoluteIndex = Math.round(scrollLeft / step);
+      
+      // Konversi ke indeks titik (dot) yang sesuai (0 sampai totalOriginal - 1)
+      let realIndex = (absoluteIndex - totalOriginal) % totalOriginal;
+      if (realIndex < 0) realIndex += totalOriginal;
+
+      // Update warna titik (dots) seketika saat scroll
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === realIndex);
+      });
+
+      // MAGIC INFINITE: Loncatan diam-diam (Silent Jump) SETELAH scroll berhenti
+      // Ini menyelesaikan masalah patah-patah saat sedang di-swipe
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        // Jika pengguna sudah men-scroll terlalu jauh ke kiri (masuk ke area clone kiri)
+        if (scrollLeft <= (totalOriginal - 1) * step) {
+          track.style.scrollSnapType = 'none'; // Matikan snap sejenak
+          track.scrollLeft = scrollLeft + (totalOriginal * step); // Lempar ke posisi asli
+          requestAnimationFrame(() => track.style.scrollSnapType = 'x mandatory');
+        } 
+        // Jika pengguna sudah men-scroll terlalu jauh ke kanan (masuk ke area clone kanan)
+        else if (scrollLeft >= (totalOriginal * 2) * step) {
+          track.style.scrollSnapType = 'none';
+          track.scrollLeft = scrollLeft - (totalOriginal * step);
+          requestAnimationFrame(() => track.style.scrollSnapType = 'x mandatory');
+        }
+      }, 150); // Loncatan dieksekusi 150ms setelah jari diangkat / scroll berhenti
+    });
+
+    // 6. Tombol Panah Klik
+    const scrollByArrow = (direction) => {
+      const step = getScrollStep();
+      track.scrollBy({
+        left: direction * step,
+        behavior: 'smooth'
+      });
+    };
+
+    if (prevBtn) prevBtn.addEventListener('click', () => scrollByArrow(-1));
+    if (nextBtn) nextBtn.addEventListener('click', () => scrollByArrow(1));
+
+    // 7. Klik Dots
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        const step = getScrollStep();
+        track.scrollTo({
+          // Selalu scroll ke set video original di tengah
+          left: (totalOriginal + index) * step,
+          behavior: 'smooth'
+        });
+      });
+    });
+  }
 
 /* --------------------------------------------------------------------------
    2. DIGITAL LIBRARY SEARCH
