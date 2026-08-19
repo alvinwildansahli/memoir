@@ -240,7 +240,7 @@ img {
 
 /* 4. CONTENT SECTIONS (Intro & Grids) */
 .content-section {
-  padding: 3rem 0;
+  padding: 3rem 0 0;
   border-bottom: none !important;
 }
 
@@ -2066,4 +2066,1242 @@ textarea {
     font-size: 1rem; 
     padding: 0 15px; 
   }
+}
+
+
+/*INDEX
+/* =========================================================
+   SECTION 1 — COMMUNITY
+========================================================= */
+
+.content-section.bg-alt {
+  margin-bottom: 0 !important;
+}
+
+.content-section.bg-alt .image-page {
+  margin: 0;
+  padding: 0;
+}
+
+.content-section.bg-alt .image-container {
+  margin: 0;
+  padding: 0;
+}
+
+.content-section.bg-alt .full-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+/* =========================================================
+   SECTION 2 — AINAN
+========================================================= */
+
+.ainan-section {
+  margin: 0 !important;
+  border: 0 !important;
+}
+.ainan-container {
+  margin-top: 0;
+}
+
+.content-section + .content-section {
+  margin-top: 0 !important;
+}
+
+/* =========================================================
+   AINAN SECTION
+========================================================= */
+.content-section-ainan {
+  padding: 0 0;
+  border-bottom: none !important;
+}
+.ainan-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  background-image: url("images/suiji-slp.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.ainan-container {
+  width: min(1400px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  position: relative;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.ainan-header {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  margin-bottom: 40px;
+}
+
+
+.ainan-heading {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+
+.ainan-heading .section-kicker {
+  margin-bottom: 10px;
+
+  font-family: var(--font-sans);
+
+  font-size: 0.72rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  color: var(--accent-crimson);
+}
+
+
+.ainan-heading h2 {
+  margin: 0;
+
+  font-family: var(--font-serif);
+
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+
+  font-weight: 600;
+
+  line-height: 0.95;
+
+  color: var(--text-main);
+}
+
+
+.ainan-explore-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding-bottom: 6px;
+
+  border-bottom: 1px solid var(--text-main);
+
+  color: var(--text-main);
+
+  font-family: var(--font-sans);
+
+  font-size: 0.8rem;
+
+  font-weight: 500;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    gap 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+.ainan-explore-link:hover {
+  gap: 15px;
+
+  opacity: 0.65;
+}
+
+
+/* =========================================================
+   FEATURE AREA
+========================================================= */
+
+.ainan-feature {
+  position: relative;
+
+  width: 100vw;
+
+  /*
+    Keluar dari .ainan-container
+    supaya gambar benar-benar full viewport.
+  */
+  margin-left: calc(50% - 50vw);
+
+  /*
+    Tinggi feature mengikuti tinggi glass card.
+  */
+  min-height: 620px;
+
+  display: flex;
+  align-items: flex-end;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+/* =========================================================
+   FULL BACKGROUND IMAGE
+========================================================= */
+
+.ainan-map-wrapper {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  border-radius: 0;
+
+  background: #ddd;
+
+  z-index: 1;
+}
+
+.ainan-background-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+#ainan-map {
+  width: 100%;
+  height: 100%;
+
+  min-height: 700px;
+}
+
+
+.ainan-map {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* =========================================================
+   MAP LABEL
+========================================================= */
+
+.ainan-map-label {
+  position: absolute;
+
+  top: 24px;
+  left: 24px;
+
+  z-index: 500;
+
+  padding: 9px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.78);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  color: #222;
+
+  font-family: var(--font-sans);
+
+  font-size: 0.68rem;
+
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   GLASS CARD
+========================================================= */
+
+/* =========================================================
+   GLASS CARD
+========================================================= */
+
+.ainan-glass-card {
+  position: absolute;
+
+  z-index: 20;
+
+  /*
+    Sekitar 1/3 lebar layar
+  */
+  width: min(480px, 33vw);
+
+  /*
+    Card menentukan tinggi feature
+  */
+  height: 620px;
+
+  /*
+    Menempel bawah
+  */
+  top: 90px;
+  bottom: 0px;
+
+  /*
+    Tidak menempel kanan
+  */
+  right: 6vw;
+
+  padding: 3rem 2.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.20);
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  /*
+    Hanya sudut atas yang rounded.
+    Bagian bawah menyatu dengan batas section.
+  */
+  border-radius: 28px 28px 0 0;
+
+  backdrop-filter:
+    blur(30px)
+    saturate(145%);
+
+  -webkit-backdrop-filter:
+    blur(30px)
+    saturate(145%);
+
+  box-shadow:
+    0 20px 70px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.ainan-card-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   CARD CATEGORY
+========================================================= */
+
+.ainan-card-category {
+  display: block;
+
+  margin-bottom: 14px;
+
+  font-family: var(--font-sans);
+
+  font-size: 0.68rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  color: var(--accent-crimson);
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.ainan-card-title {
+  margin: 0 0 22px;
+
+  font-family: var(--font-serif);
+
+  font-size: clamp(2rem, 3vw, 3rem);
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  color: var(--text-main);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.ainan-card-description {
+  margin: 0 0 30px;
+
+  font-family: var(--font-sans);
+
+  font-size: 0.88rem;
+
+  line-height: 1.8;
+
+  color: var(--text-muted);
+}
+
+
+/* =========================================================
+   META
+========================================================= */
+
+.ainan-meta {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 13px;
+
+  margin-bottom: 28px;
+
+  padding-top: 22px;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+
+.ainan-meta-item {
+  display: flex;
+
+  align-items: baseline;
+
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+
+.ainan-meta-label {
+  font-family: var(--font-sans);
+
+  font-size: 0.58rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+
+  color: #777;
+}
+
+
+.ainan-meta-value {
+  font-family: var(--font-sans);
+
+  font-size: 0.72rem;
+
+  font-weight: 500;
+
+  color: var(--text-main);
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   TAGS
+========================================================= */
+
+.ainan-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-bottom: 28px;
+}
+
+
+.ainan-tag {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 7px 10px;
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.22);
+
+  font-family: var(--font-sans);
+
+  font-size: 0.62rem;
+
+  color: var(--text-main);
+}
+
+
+/* =========================================================
+   CARD LINK
+========================================================= */
+
+.ainan-card-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  width: fit-content;
+
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid var(--text-main);
+
+  color: var(--text-main);
+
+  font-family: var(--font-sans);
+
+  font-size: 0.72rem;
+
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition:
+    gap 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+.ainan-card-link:hover {
+  gap: 14px;
+
+  opacity: 0.65;
+}
+
+
+/* =========================================================
+   LEAFLET
+========================================================= */
+
+.ainan-map-wrapper .leaflet-container {
+  width: 100%;
+  height: 100%;
+
+  min-height: 700px;
+
+  font-family: var(--font-sans);
+}
+
+
+.ainan-map-wrapper .leaflet-control-attribution {
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .ainan-container {
+    width: min(100% - 40px, 1400px);
+  }
+
+
+  .ainan-feature {
+    min-height: 650px;
+  }
+
+
+  .ainan-glass-card {
+    width: 42%;
+
+    right: 3%;
+
+    min-height: 480px;
+
+    padding: 2.5rem 2rem;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .ainan-section {
+    padding-top: 80px;
+  }
+
+
+  .ainan-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+  }
+
+
+  .ainan-heading h2 {
+    font-size: 2.7rem;
+  }
+
+
+  .ainan-feature {
+    min-height: 700px;
+  }
+
+
+  .ainan-map-wrapper {
+    border-radius: 22px;
+
+    height: 500px;
+  }
+
+
+  #ainan-map {
+    min-height: 500px;
+  }
+
+
+  .ainan-map-wrapper .leaflet-container {
+    min-height: 500px;
+  }
+
+
+  /*
+    Card menjadi lebih lebar
+    dan tetap menempel bawah.
+  */
+  .ainan-glass-card {
+    width: calc(100% - 30px);
+
+    right: 15px;
+
+    min-height: auto;
+
+    padding: 2rem 1.6rem;
+
+    border-radius: 22px 22px 0 0;
+  }
+
+
+  .ainan-card-title {
+    font-size: 2.2rem;
+  }
+
+
+  .ainan-card-description {
+    font-size: 0.82rem;
+
+    line-height: 1.7;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .ainan-container {
+    width: calc(100% - 28px);
+  }
+
+
+  .ainan-feature {
+    min-height: 720px;
+  }
+
+
+  .ainan-map-wrapper {
+    height: 480px;
+  }
+
+
+  #ainan-map {
+    min-height: 480px;
+  }
+
+
+  .ainan-map-wrapper .leaflet-container {
+    min-height: 480px;
+  }
+
+
+  .ainan-glass-card {
+    width: calc(100% - 20px);
+
+    right: 10px;
+
+    padding: 1.8rem 1.4rem;
+  }
+
+
+  .ainan-meta-item {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 3px;
+  }
+
+
+  .ainan-meta-value {
+    text-align: left;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*//////////============================================================================
+//INDEX
+///////////=============================================================================
+
+/* ==========================================================================
+   WTU | A PERSONAL ARCHIVE - CORE STYLES (CLEANED)
+   ========================================================================== */
+
+/* =========================================================
+   1. IMPORTS & VARIABLES
+========================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap");
+
+:root {
+  --bg-paper: #ffffff;
+  --bg-white: #ffffff;
+  --bg-alt: #f9f9f9;
+  --text-main: #222222;
+  --text-muted: #555555;
+  --accent-crimson: #8b0000;
+  --accent-gold: #d4af37;
+  --border-color: #dcdcdc;
+  --border-dark: #1a1a1a;
+  --font-serif: "Crimson Text", Georgia, serif;
+  --font-sans: "Inter", -apple-system, sans-serif;
+  --radius-xs: 2px;
+  --ease: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* =========================================================
+   2. GLOBAL RESETS & TYPOGRAPHY
+========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
+body {
+  background-color: var(--bg-paper);
+  color: var(--text-main);
+  font-family: var(--font-serif);
+  line-height: 1.8;
+  font-size: 1.15rem;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-main);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--ease);
+}
+
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+.italic { font-style: italic; }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 0 2rem;
+}
+
+.bg-white { background-color: var(--bg-white); }
+.bg-alt { background-color: var(--bg-alt); }
+
+/* =========================================================
+   3. HEADER & NAVIGATION
+========================================================= */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  z-index: 100;
+  background: transparent;
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brand-text {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--accent-crimson);
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.nav-links a {
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  border-bottom-color: var(--accent-crimson);
+  font-weight: 600;
+}
+
+.lang-switcher button {
+  background: none; border: none; color: inherit;
+  opacity: 0.6; cursor: pointer; font-size: 0.75rem;
+  letter-spacing: 1px; transition: var(--ease);
+}
+
+.lang-switcher button.active {
+  opacity: 1; font-weight: 600; color: var(--accent-crimson);
+}
+
+.lang-divider { margin: 0 5px; opacity: 0.5; }
+
+/* =========================================================
+   4. HERO SECTION
+========================================================= */
+.hero-section {
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: linear-gradient(rgba(30, 18, 18, 0.45), rgba(30, 18, 18, 0.55)), url("images/main.JPG");
+  background-size: cover;
+  background-position: center 80%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.hero-content { max-width: 85vh; }
+
+.hero-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.95rem; color: var(--bg-white);
+  text-transform: uppercase; letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-size: 3rem; font-weight: 400;
+  line-height: 1.3; color: var(--bg-white);
+}
+
+/* =========================================================
+   5. GENERAL CONTENT SECTION & INTRO
+========================================================= */
+.content-section {
+  position: relative;
+  z-index: 10;
+  padding: 4rem 0;
+}
+
+.intro-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 1.75rem; color: var(--accent-crimson);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem; margin-bottom: 1.5rem;
+}
+
+.intro-text p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.drop-cap::first-letter {
+  float: left; font-size: 4.8rem; line-height: 0.8;
+  padding-right: 8px; padding-top: 8px;
+  color: var(--accent-crimson); font-family: var(--font-serif);
+}
+
+.intro-image {
+  position: relative;
+  width: min(420px, 100%);
+  margin-left: auto; overflow: hidden;
+}
+
+.intro-image img { filter: grayscale(100%); transition: filter 0.6s ease; }
+.intro-image:hover img { filter: grayscale(0%); }
+.intro-image::after {
+  content: ""; position: absolute; inset: auto 0 0 0; height: 40%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.6) 70%, white 100%);
+  pointer-events: none;
+}
+
+/* =========================================================
+   6. SECTION 1: COMMUNITY & MEDIA (IMAGE + VIDEO)
+========================================================= */
+.community-section { padding-bottom: 0; }
+
+.text-center-layout {
+  display: flex; flex-direction: column; justify-content: center;
+  align-items: center; width: 100%; margin-bottom: 3rem;
+}
+
+.text-center-layout .intro-text { align-items: center; text-align: center; width: 100%; }
+
+.text-center-layout .section-title {
+  font-family: Georgia, serif; font-size: 2.5rem; font-weight: 700;
+  color: var(--accent-crimson); margin-bottom: 12px; border: none;
+}
+
+.text-center-layout .section-subtitle {
+  font-family: Georgia, serif; font-size: 1.125rem;
+  color: #000; line-height: 1.5; max-width: 600px; margin: 0 auto;
+}
+
+.image-page { position: relative; width: 100%; background: transparent; }
+.image-page::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0;
+  height: 50%; background: #8B0000; z-index: 0;
+}
+
+.image-container { position: relative; z-index: 1; width: 100%; padding: 12px; margin: 0; }
+.full-image { display: block; width: 100%; height: auto; border-radius: 20px; }
+
+.video-container { display: block; width: 100%; background: #000; padding: 0; margin: 0; }
+.youtube-wrapper { width: 100%; position: relative; aspect-ratio: 16 / 9; background: #000; }
+.youtube-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
+/* =========================================================
+   7. SECTION 2: AINAN (FEATURED NOTE)
+========================================================= */
+.content-section-ainan {
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.ainan-section {
+  position: relative;
+  width: 100%;
+  padding: 6rem 0; /* Memberi ruang napas di atas dan bawah kartu */
+  
+  /* Pengaturan Background */
+  background-image: url("images/suiji-slp.jpg"); /* Sesuaikan path gambar Anda */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* INI KUNCINYA: Membuat background diam saat di-scroll */
+  background-attachment: fixed; 
+  
+  overflow: hidden;
+}
+
+.ainan-container {
+  width: min(1400px, calc(100% - 80px));
+  margin: 0 auto;
+  position: relative;
+  
+  /* Flexbox untuk menumpuk elemen ke bawah dan merapat ke kanan */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Memaksa semua isi ke sisi kanan */
+  gap: 3rem; /* Jarak atas-bawah antar glass card */
+}
+
+.ainan-glass-card {
+  position: relative; /* Menjaga kartu tetap pada alur dokumen (bisa di-scroll) */
+  z-index: 20; 
+  width: min(480px, 100%); /* Lebar kartu maksimal 480px */
+  padding: 3rem 2.6rem;
+  margin-top: -5px;
+  margin-bottom: -20px;
+  
+  background: rgba(255, 255, 255, 0.20);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 28px; /* Sudut membulat di semua sisi */
+  
+  backdrop-filter: blur(30px) saturate(145%); 
+  -webkit-backdrop-filter: blur(30px) saturate(145%);
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  transform: translateY(20px);
+}
+
+.ainan-card-category {
+  display: block; margin-bottom: 14px; font-family: var(--font-sans);
+  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--accent-crimson);
+}
+
+.ainan-card-title {
+  margin: 0 0 22px; font-family: var(--font-serif);
+  font-size: clamp(2rem, 3vw, 3rem); font-weight: 600; line-height: 1;
+}
+
+.ainan-card-description {
+  margin: 0 0 30px; font-family: var(--font-sans);
+  font-size: 0.88rem; line-height: 1.8; color: var(--text-main);
+}
+
+.ainan-meta {
+  display: grid; gap: 13px; margin-bottom: 28px; padding-top: 22px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.ainan-meta-item { display: flex; align-items: baseline; justify-content: space-between; gap: 15px; }
+.ainan-meta-label { font-family: var(--font-sans); font-size: 0.58rem; font-weight: 600; letter-spacing: 0.1em; color: #777; }
+.ainan-meta-value { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 500; color: var(--text-main); text-align: right; }
+
+.ainan-card-link {
+  display: inline-flex; align-items: center; gap: 9px;
+  padding-bottom: 5px; border-bottom: 1px solid var(--text-main);
+  font-family: var(--font-sans); font-size: 0.72rem; font-weight: 500;
+  transition: gap 0.25s ease, opacity 0.25s ease;
+}
+
+.ainan-card-link:hover { gap: 14px; opacity: 0.65; }
+
+/* =========================================================
+   8. SECTION 3: RECENT JOURNEYS (CARD GRID)
+========================================================= */
+.content-section {
+  position: relative;
+  z-index: 10;
+  background: var(--bg-white);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid var(--border-dark);
+  padding-bottom: 1rem;
+}
+
+.section-header h2 { font-family: var(--font-serif); font-size: 2rem; margin: 0; }
+
+.view-all-link {
+  font-family: var(--font-sans); font-size: 0.85rem; text-transform: uppercase;
+  letter-spacing: 1px; color: var(--accent-crimson); font-weight: 500;
+  display: flex; align-items: center; gap: 8px;
+}
+.view-all-link:hover { color: var(--text-main); }
+
+.card-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;
+}
+
+.archive-card {
+  background: var(--bg-white); border: 1px solid var(--border-color);
+  padding: 2.5rem 2rem; transition: var(--ease); position: relative;
+  display: flex; flex-direction: column;
+}
+
+.archive-card::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0;
+  height: 3px; background: transparent; transition: var(--ease);
+}
+
+.archive-card:hover { transform: translateY(-6px); box-shadow: 4px 12px 30px rgba(0, 0, 0, 0.06); border-color: #cccccc; }
+.archive-card.accent-gold:hover::before { background: var(--accent-gold); }
+
+.card-category {
+  font-family: var(--font-sans); font-size: 0.75rem; text-transform: uppercase;
+  letter-spacing: 2px; color: var(--text-muted); margin-bottom: 1rem;
+}
+
+.card-title { font-size: 1.4rem; line-height: 1.3; margin-bottom: 1rem; }
+.archive-card p { font-size: 1rem; color: var(--text-muted); line-height: 1.6; flex-grow: 1; }
+
+/* =========================================================
+   9. FOOTER
+========================================================= */
+.site-footer {
+  padding: 4rem 0 2rem; background-color: var(--bg-white);
+  border-top: 4px double var(--border-color); position: relative; z-index: 10;
+}
+
+.footer-layout { display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; margin-bottom: 3rem; }
+
+.footer-tagline {
+  font-family: var(--font-sans); font-size: 0.85rem; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 1px; margin-top: 0.5rem;
+}
+
+.footer-links { display: flex; gap: 4rem; justify-content: flex-end; }
+.link-column h4 {
+  font-family: var(--font-sans); font-size: 0.85rem; text-transform: uppercase;
+  letter-spacing: 2px; margin-bottom: 1rem; border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.link-column li { margin-bottom: 0.75rem; }
+.link-column a { font-family: var(--font-sans); font-size: 0.9rem; color: var(--text-muted); }
+.link-column a:hover { color: var(--accent-crimson); }
+
+.footer-bottom { border-top: 1px solid var(--border-color); padding-top: 1.5rem; text-align: center; }
+.copyright { font-family: var(--font-sans); font-size: 0.75rem; color: #999; letter-spacing: 1px; }
+
+/* =========================================================
+   10. RESPONSIVE DESIGN
+========================================================= */
+
+/* TABLET (< 992px) */
+@media screen and (max-width: 992px) {
+  .intro-layout, .footer-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-links { justify-content: flex-start; }
+  .ainan-glass-card { width: 45%; }
+}
+
+/* MOBILE (< 768px) */
+@media screen and (max-width: 768px) {
+  /* HEADER */
+  .site-header { border-bottom: 1px solid rgba(0, 0, 0, 0.06); }
+  .site-nav { padding: 0.5rem 1rem; flex-direction: column; gap: 0.5rem; }
+  .brand-text { font-size: 1.4rem; }
+  .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+  
+  /* HERO */
+  .hero-section { min-height: 45vh; padding: 2rem 1rem; }
+  .hero-title { font-size: 2rem; line-height: 1.15; }
+  .drop-cap::first-letter { font-size: 3rem; }
+  
+  /* INTRO & SECTION 1 */
+  .text-center-layout .section-title { font-size: 2rem; }
+  .text-center-layout .section-subtitle { font-size: 1rem; padding: 0 15px; }
+
+  /* SECTION 2: AINAN */
+  .ainan-section { padding: 40px 0; min-height: auto; align-items: flex-start; }
+  .ainan-container { display: block; justify-content: center;}
+  .ainan-glass-card {
+    width: 100%; min-height: auto;
+    padding: 2rem 1.6rem; border-radius: 22px; margin-top: 2rem;
+  }
+  .ainan-card-title { font-size: 2.2rem; }
+  .ainan-card-description { font-size: 0.82rem; line-height: 1.7; }
+  
+  /* SECTION 3: CARDS */
+  .card-grid { grid-template-columns: 1fr; }
+  
+  /* FOOTER */
+  .site-footer { padding: 2rem 0 1rem; }
+  .footer-layout { gap: 1.5rem; margin-bottom: 1.5rem; }
+  .footer-links { flex-direction: column; gap: 1.5rem; }
+}
+
+/* SMALL MOBILE (< 480px) */
+@media screen and (max-width: 480px) {
+  .ainan-glass-card { padding: 1.8rem 1.4rem; }
+  .ainan-meta-item { flex-direction: column; align-items: flex-start; gap: 3px; }
+  .ainan-meta-value { text-align: left; }
 }

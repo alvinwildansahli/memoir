@@ -12,81 +12,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./main.css" />
-
-    <!-- Variabel CSS dan Utilitas Warna Latar & Layout -->
-    <style>
-      :root {
-        --bg-paper: #ffffff;
-        --bg-white: #ffffff;
-        --bg-alt: #f9f9f9;
-        --text-main: #222222;
-        --text-muted: #555555;
-        --accent-crimson: #8b0000;
-        --accent-gold: #d4af37;
-        --border-color: #dcdcdc;
-        --border-dark: #1a1a1a;
-        --font-serif: "Crimson Text", Georgia, serif;
-        --font-sans: "Inter", -apple-system, sans-serif;
-      }
-
-      .bg-paper { background-color: var(--bg-paper); }
-      .bg-white { background-color: var(--bg-white); }
-      .bg-alt { background-color: var(--bg-alt); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
-
-      /* Styling Khusus Judul Tengah */
-      .text-center-layout {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-        width: 100%;
-        margin-bottom: 24px;
-      }
-      .text-center-layout .intro-text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-      }
-      .text-center-layout .section-title {
-        font-family: var(--font-serif);
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: var(--accent-crimson);
-        margin-bottom: 12px;
-        line-height: 1.2;
-        text-align: center;
-      }
-      .text-center-layout .section-subtitle {
-        font-family: var(--font-serif);
-        font-size: 1.125rem;
-        color: var(--text-main);
-        line-height: 1.5;
-        margin: 0 auto;
-        max-width: 600px;
-        text-align: center;
-      }
-      
-      /* Typography untuk Narasi */
-      .narrative-text {
-        max-width: 800px; 
-        margin: 0 auto 40px; 
-        color: var(--text-muted); 
-        line-height: 1.8;
-        font-family: var(--font-sans);
-        font-size: 1rem;
-      }
-      
-      @media (max-width: 768px) {
-        .text-center-layout .section-title { font-size: 2rem; }
-        .text-center-layout .section-subtitle { font-size: 1rem; padding: 0 15px; }
-        .narrative-text { padding: 0 15px; }
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
   </head>
-  <body class="bg-paper">
+  <body>
     <header class="site-header">
       <nav class="site-nav">
         <div class="nav-logo">
@@ -145,30 +76,6 @@
 
     <section class="hero-section bg-white">
       <div class="container hero-content">
-        <p
-          class="hero-subtitle translatable"
-          data-en="A Personal Archive"
-          data-id="Sebuah Arsip Personal"
-        >
-          A Personal Archive
-        </p>
-        <h1 class="hero-title">
-          <span
-            class="translatable"
-            data-en="Thoughts, Reflections,"
-            data-id="Pemikiran, Refleksi,"
-            >Thoughts, Reflections,</span
-          ><br />
-          <span
-            class="translatable"
-            data-en="and the Process of"
-            data-id="dan Proses untuk"
-            >and the Process of</span
-          >
-          <span class="italic translatable" data-en="Become" data-id="Menjadi"
-            >Become</span
-          >
-        </h1>
       </div>
     </section>
 
@@ -212,135 +119,290 @@
       </div>
     </section>
 
-<!-- SECTION 1: Community Activities (SUIJI & PPKO) -->
-<section class="content-section bg-alt" style="padding-top: 60px;">
+<!-- SECTION 1 -->
+<section class="content-section bg-alt community-section">
+
   <div class="container">
+  </div>
+
+  <!-- VIDEO -->
+  <div class="video-container">
+    <div class="youtube-wrapper">
+
+      <iframe
+        src="https://www.youtube.com/embed/va9fvW3wSvw?rel=0&modestbranding=1"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ============================================================
+     SECTION 2: AINAN — FEATURED NOTES
+     ============================================================ -->
+<section class="content-section-ainan ainan-section">
+
+  <div class="ainan-container">
+
+
     
-    <!-- Judul Tengah -->
-    <div class="text-center-layout">
-      <div class="intro-text">
-        <h2 class="section-title translatable" data-en="Community Initiatives & Service-Learning" data-id="Inisiatif Komunitas & Service-Learning">
-          Community Initiatives & Service-Learning
-        </h2>
-        <p class="section-subtitle translatable" data-en="Reflections and collaborative actions alongside grassroots communities." data-id="Refleksi dan aksi kolaboratif bersama masyarakat di tingkat akar rumput.">
-          Reflections and collaborative actions alongside grassroots communities.
-        </p>
-      </div>
-    </div>
-    </div>
+    <!-- ========================================================
+         CARD 1 — Dibawah Bayang Bayang Tanah Longsor
+         ======================================================== -->
+    <article class="ainan-glass-card">
 
-    <!-- Gambar -->
-    <section class="image-page">
-      <div class="image-container">
-        <img
-          src="images/PPKO.png"
-          alt="PPKO"
-          class="full-image"
-        >
-      </div>
-    </section>
+      <div class="ainan-card-content">
 
-    <!-- Video -->
-    <div class="video-container" style="margin-top: 32px;">
-      <div class="youtube-wrapper">
-        <iframe
-          src="https://www.youtube.com/embed/va9fvW3wSvw?rel=0&modestbranding=1"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- SECTION 2: Featured Notes -->
-<section class="content-section bg-white">
-  <div class="container">
-    <div class="section-header">
-      <h2
-        class="translatable"
-        data-en="Featured Notes"
-        data-id="Catatan Pilihan"
-      >
-        Featured Notes
-      </h2>
-
-      <a href="note.html" class="view-all-link">
+        <!-- CATEGORY -->
         <span
-          class="translatable"
-          data-en="Explore Notes"
-          data-id="Jelajahi Catatan"
+          class="ainan-card-category translatable"
+          data-en="Community Empowerment"
+          data-id="Pemberdayaan Masyarakat"
         >
-          Explore Notes
-        </span>
-        &rarr;
-      </a>
-    </div>
-
-    <div class="card-grid">
-
-      <article class="archive-card accent-crimson">
-        <span
-          class="card-category translatable"
-          data-en="Climate Dynamics"
-          data-id="Dinamika Iklim"
-        >
-          Climate Dynamics
+          Community Empowerment
         </span>
 
+        <!-- TITLE -->
         <h3
-          class="card-title translatable"
-          data-en="Climate Anxiety in Coastal Communities"
-          data-id="Kecemasan Iklim di Masyarakat Pesisir"
+          class="ainan-card-title translatable"
+          data-en="Living Beneath the Shadow of Landslides"
+          data-id="Dibawah Bayang Bayang Tanah Longsor"
         >
-          Climate Anxiety in Coastal Communities
+          Living Beneath the Shadow of Landslides
         </h3>
 
+        <!-- DESCRIPTION -->
         <p
-          class="translatable"
-          data-en="A structural evaluation of how environmental variability, sea-level rise risks, and constant livelihood shifts shape functional vulnerability management in dynamic intertidal regions."
-          data-id="Evaluasi struktural tentang bagaimana variabilitas lingkungan, risiko kenaikan muka air laut, dan pergeseran mata pencaharian yang konstan membentuk manajemen kerentanan fungsional di wilayah intertidal yang dinamis."
+          class="ainan-card-description translatable"
+          data-en="Since 2012, at least one landslide has been recorded every year in Cibunian Village, Bogor Regency. These hydro-meteorological disasters not only damage infrastructure but also threaten community safety, income stability, and access to education. Addressing these risks requires collective efforts through well-planned, sustainable adaptation and mitigation measures that actively involve the community."
+          data-id="Sejak 2012, setidaknya satu kejadian tanah longsor tercatat setiap tahun di Desa Cibunian, Kabupaten Bogor. Bencana hidrometeorologi ini tidak hanya merusak infrastruktur tapi mengancam keselamatan masyarakat, kestabilan pendapatan serta akses terhadap pendidikan. Ancaman dan tantangan tersebut memerlukan upaya kolektif melalui langkah-langkah adaptasi dan mitigasi yang terencana, berkelanjutan, dan melibatkan masyarakat secara aktif."
         >
-          A structural evaluation of how environmental variability,
-          sea-level rise risks, and constant livelihood shifts shape
-          functional vulnerability management in dynamic intertidal regions.
+          Since 2012, at least one landslide has been recorded every year in Cibunian Village, Bogor Regency. These hydro-meteorological disasters not only damage infrastructure but also threaten community safety, income stability, and access to education. Addressing these risks requires collective efforts through well-planned, sustainable adaptation and mitigation measures that actively involve the community.
         </p>
-      </article>
 
-      <article class="archive-card accent-crimson">
-        <span
-          class="card-category translatable"
-          data-en="Observational Methodology"
-          data-id="Metodologi Observasional"
+        <!-- META INFORMATION -->
+        <div class="ainan-meta">
+
+          <!-- PROGRAM -->
+          <div class="ainan-meta-item">
+            <span class="ainan-meta-label">PROGRAM</span>
+            <span class="ainan-meta-value">PPK Ormawa</span>
+          </div>
+
+          <!-- LOCATION -->
+          <div class="ainan-meta-item">
+            <span class="ainan-meta-label">LOCATION</span>
+            <span class="ainan-meta-value">Cibunian, Bogor</span>
+          </div>
+
+          <!-- DATE -->
+          <div class="ainan-meta-item">
+            <span class="ainan-meta-label">DATE</span>
+            <span class="ainan-meta-value">5 Jul – 21 Oct 2025</span>
+          </div>
+
+        </div>
+
+        <!-- READ MORE LINK -->
+        <a
+          href="note.html"
+          class="ainan-card-link"
+          aria-label="Read the full story about the Land of Sunda"
         >
-          Observational Methodology
+
+          <span
+            class="translatable"
+            data-en="Read the full story"
+            data-id="Baca cerita lengkap"
+          >
+            Read the full story
+          </span>
+
+          <span aria-hidden="true">→</span>
+
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- ========================================================
+         CARD 2 — JOURNEY THROUGH THE LAND OF SUNDA
+         ======================================================== -->
+    <article class="ainan-glass-card">
+
+      <div class="ainan-card-content">
+
+        <!-- CATEGORY -->
+        <span
+          class="ainan-card-category translatable"
+          data-en="Cultural Exchange"
+          data-id="Pertukaran Budaya"
+        >
+          Cultural Exchange
         </span>
 
+        <!-- TITLE -->
         <h3
-          class="card-title translatable"
-          data-en="Witnessing the Changing Tides"
-          data-id="Menyaksikan Pasang Surut yang Berubah"
+          class="ainan-card-title translatable"
+          data-en="Learning from Ainan"
+          data-id="Belajar dari Ainan"
         >
-          Witnessing the Changing Tides
+          Learning from Ainan
         </h3>
 
+        <!-- DESCRIPTION -->
         <p
-          class="translatable"
-          data-en="Climate modeling often reduces the ocean to matrix arrays. Yet, sea-level rise is a physical reality redefining the boundary between human habitats and coastal ecosystems."
-          data-id="Pemodelan iklim seringkali mereduksi lautan menjadi susunan matriks. Namun, kenaikan muka air laut adalah realitas fisik yang mendefinisikan ulang batas antara habitat manusia dan ekosistem pesisir."
+          class="ainan-card-description translatable"
+          data-en="Ainan-cho is one of the rural areas of Ehime Prefecture experiencing significant depopulation and population ageing. Through the SUIJI Service Learning Program, cultural traditions, local knowledge, environmental adaptation, and community resilience became part of a direct learning experience."
+          data-id="Ainan-cho merupakan salah satu wilayah pedesaan di Prefektur Ehime yang menghadapi depopulasi dan penuaan penduduk yang signifikan. Melalui SUIJI Service Learning Program, tradisi budaya, pengetahuan lokal, adaptasi lingkungan, dan resiliensi masyarakat menjadi bagian dari pengalaman belajar secara langsung."
         >
-          Climate modeling often reduces the ocean to matrix arrays.
-          Yet, sea-level rise is a physical reality redefining the
-          boundary between human habitats and coastal ecosystems.
+          Ainan-cho is one of the rural areas of Ehime Prefecture
+          experiencing significant depopulation and population ageing.
+          Through the SUIJI Service Learning Program, cultural traditions,
+          local knowledge, environmental adaptation, and community resilience
+          became part of a direct learning experience.
         </p>
-      </article>
 
-    </div>
+        <!-- META INFORMATION -->
+        <div class="ainan-meta">
+
+          <!-- PROGRAM -->
+          <div class="ainan-meta-item">
+            <span class="ainan-meta-label">PROGRAM</span>
+            <span class="ainan-meta-value">SUIJI SLP</span>
+          </div>
+
+          <!-- LOCATION -->
+          <div class="ainan-meta-item">
+            <span class="ainan-meta-label">LOCATION</span>
+            <span class="ainan-meta-value">Ainan-cho, Ehime</span>
+          </div>
+
+          <!-- DATE -->
+          <div class="ainan-meta-item">
+            <span class="ainan-meta-label">DATE</span>
+            <span class="ainan-meta-value">19 Aug – 5 Sept 2025</span>
+          </div>
+
+        </div>
+
+        <!-- READ MORE LINK -->
+        <a
+          href="note.html"
+          class="ainan-card-link"
+          aria-label="Read the full story about learning from Ainan"
+        >
+
+          <span
+            class="translatable"
+            data-en="Read the full story"
+            data-id="Baca cerita lengkap"
+          >
+            Read the full story
+          </span>
+
+          <span aria-hidden="true">→</span>
+
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ========================================================
+         CARD 3 — JOURNEY THROUGH THE LAND OF SUNDA
+         ======================================================== -->
+    <article class="ainan-glass-card">
+
+      <div class="ainan-card-content">
+
+        <!-- CATEGORY -->
+        <span
+          class="ainan-card-category translatable"
+          data-en="Cultural Exchange"
+          data-id="Pertukaran Budaya"
+        >
+          Cultural Exchange
+        </span>
+
+        <!-- TITLE -->
+        <h3
+          class="ainan-card-title translatable"
+          data-en="A Journey Through the Land of Sunda"
+          data-id="Perjalanan di Tanah Sunda"
+        >
+          A Journey Through the Land of Sunda
+        </h3>
+
+        <!-- DESCRIPTION -->
+        <p
+          class="ainan-card-description translatable"
+          data-en="One of the traces of the Pajajaran Kingdom can be found in Pasir Eurih Village, Bogor Regency. Not far from the urban area, the village preserves stories passed down through generations. Its living traditions have become an integral part of everyday life, naturally blending into the community's customs, values, and way of life."
+          data-id="Salah satu jejak Kerajaan Pajajaran dapat ditemukan di Desa Pasir Eurih, Kabupaten Bogor. Tidak jauh dari kawasan perkotaan, desa ini menyimpan cerita yang diwariskan dari generasi ke generasi. Tradisi yang masih hidup telah menjadi bagian tak terpisahkan dari kehidupan sehari-hari, menyatu secara alami dengan adat, nilai, dan cara hidup masyarakat yang terus dilestarikan."
+        >
+          One of the traces of the Pajajaran Kingdom can be found in
+          Pasir Eurih Village, Bogor Regency. Not far from the urban area,
+          the village preserves stories passed down through generations.
+          Its living traditions have become an integral part of everyday life,
+          naturally blending into the community's customs, values, and way of life.
+        </p>
+
+        <!-- META INFORMATION -->
+        <div class="ainan-meta">
+
+          <!-- PROGRAM -->
+          <div class="ainan-meta-item">
+            <span class="ainan-meta-label">PROGRAM</span>
+            <span class="ainan-meta-value">SUIJI SLP</span>
+          </div>
+
+          <!-- LOCATION -->
+          <div class="ainan-meta-item">
+            <span class="ainan-meta-label">LOCATION</span>
+            <span class="ainan-meta-value">Pasir Eurih, Bogor</span>
+          </div>
+
+          <!-- DATE -->
+          <div class="ainan-meta-item">
+            <span class="ainan-meta-label">DATE</span>
+            <span class="ainan-meta-value">21 Feb – 5 Mar 2025</span>
+          </div>
+
+        </div>
+
+        <!-- READ MORE LINK -->
+        <a
+          href="note.html"
+          class="ainan-card-link"
+          aria-label="Read the full story about the Land of Sunda"
+        >
+
+          <span
+            class="translatable"
+            data-en="Read the full story"
+            data-id="Baca cerita lengkap"
+          >
+            Read the full story
+          </span>
+
+          <span aria-hidden="true">→</span>
+
+        </a>
+
+      </div>
+
+    </article>
+
   </div>
-</section>
 
+</section>
 
 <!-- SECTION 3: Recent Journeys -->
 <section class="content-section bg-alt">
@@ -572,9 +634,8 @@
       </p>
     </div>
 
-  </div>
+    </div>
 </footer>
-
 <script src="./main.js"></script>
 </body>
 </html>
